@@ -372,9 +372,9 @@
             this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWarning.Location = new System.Drawing.Point(35, 584);
             this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(417, 20);
+            this.lblWarning.Size = new System.Drawing.Size(498, 20);
             this.lblWarning.TabIndex = 16;
-            this.lblWarning.Text = "*The change will be affected after you create a new game.";
+            this.lblWarning.Text = "*The change in this form will be affected after you create a new game.";
             // 
             // toolStripSeparator2
             // 
