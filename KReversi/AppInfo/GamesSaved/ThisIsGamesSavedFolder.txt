@@ -1,0 +1,5 @@
+﻿This file exists in order for visual studio to create Temp folder to
+bin folder when build.
+(Visual studio cannot create 
+an empty folder to bin folder,
+you need to have at least one file)

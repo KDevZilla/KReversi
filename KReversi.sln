@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1684
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KReversi", "KReversi\KReversi.csproj", "{9322A6AD-67F4-487B-9A74-C278749832A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KReversiUnitTest", "KReversiUnitTest\KReversiUnitTest\KReversiUnitTest.csproj", "{28E766E3-4D4D-4751-B67B-2318CD430BA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9322A6AD-67F4-487B-9A74-C278749832A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9322A6AD-67F4-487B-9A74-C278749832A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9322A6AD-67F4-487B-9A74-C278749832A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9322A6AD-67F4-487B-9A74-C278749832A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E766E3-4D4D-4751-B67B-2318CD430BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E766E3-4D4D-4751-B67B-2318CD430BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E766E3-4D4D-4751-B67B-2318CD430BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E766E3-4D4D-4751-B67B-2318CD430BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B533E784-8A08-4C33-8473-C04213439BA1}
+	EndGlobalSection
+EndGlobal

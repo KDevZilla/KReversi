@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9322A6AD-67F4-487B-9A74-C278749832A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KReversi</RootNamespace>
+    <AssemblyName>KReversi</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\BasicBot.cs" />
+    <Compile Include="AI\BasicBotV2.cs" />
+    <Compile Include="AI\BasicBotV3.cs" />
+    <Compile Include="AI\Board.cs" />
+    <Compile Include="AI\Evaluate.cs" />
+    <Compile Include="AI\Hash.cs" />
+    <Compile Include="AI\IBoard.cs" />
+    <Compile Include="AI\MiniMax.cs" />
+    <Compile Include="AI\MiniMaxBotProto.cs" />
+    <Compile Include="AI\MiniMaxParameter.cs" />
+    <Compile Include="RecentlyFile.cs" />
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBotCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBotCreator.Designer.cs">
+      <DependentUpon>FormBotCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigure.Designer.cs">
+      <DependentUpon>FormConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomMessageBox.Designer.cs">
+      <DependentUpon>FormCustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGame.Designer.cs">
+      <DependentUpon>FormGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBoardEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBoardEditor.Designer.cs">
+      <DependentUpon>FormBoardEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewGame.Designer.cs">
+      <DependentUpon>FormNewGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowMinimax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowMinimax.Designer.cs">
+      <DependentUpon>FormShowMinimax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTestDynamicMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestDynamicMenu.Designer.cs">
+      <DependentUpon>FormTestDynamicMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\BoardHistory.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\GameBuilder.cs" />
+    <Compile Include="Game\GameValue.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="KReversiSettings.cs" />
+    <Compile Include="UI\MenuCustomColor.cs" />
+    <Compile Include="UI\MockIUI.cs" />
+    <Compile Include="UI\ReverseUI.cs" />
+    <Compile Include="SimpleLog.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="AI\IPlayer.cs" />
+    <Compile Include="pnlBitboard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AI\RandomBot.cs" />
+    <Compile Include="UI\Dialog.cs" />
+    <Compile Include="UI\IUI.cs" />
+    <Compile Include="UI\PanelBotConfigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\PanelPositionBotConfigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\PictureBoxBoard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Theme.cs" />
+    <Compile Include="Utility\Extensions.cs" />
+    <Compile Include="Utility\ThemeUtility.cs" />
+    <Compile Include="Utility\TimeMeasure.cs" />
+    <Compile Include="Utility\UI.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Utility\FileUtility.cs" />
+    <Compile Include="Utility\SerializeUtility.cs" />
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBotCreator.resx">
+      <DependentUpon>FormBotCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigure.resx">
+      <DependentUpon>FormConfigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomMessageBox.resx">
+      <DependentUpon>FormCustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGame.resx">
+      <DependentUpon>FormGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBoardEditor.resx">
+      <DependentUpon>FormBoardEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewGame.resx">
+      <DependentUpon>FormNewGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowMinimax.resx">
+      <DependentUpon>FormShowMinimax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestDynamicMenu.resx">
+      <DependentUpon>FormTestDynamicMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="AppInfo\Boards\Board01.brd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AppInfo\Boards\Board02.brd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AppInfo\Boards\Board03.brd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AppInfo\Boards\Board04.brd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AppInfo\Bots\Lucy.bot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AppInfo\Bots\Madoka.bot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AppInfo\Bots\Ryo.bot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AppInfo\Bots\Terra.bot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Bot\Audrey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Bot\Jesus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Bot\Magnato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppInfo\AppImages\HumanClip01.png" />
+    <Content Include="AppInfo\AppImages\Player1.png" />
+    <Content Include="AppInfo\AppImages\Player1_BK.png" />
+    <Content Include="AppInfo\AppImages\Player2.png" />
+    <Content Include="AppInfo\AppImages\Player2_BK.png" />
+    <Content Include="AppInfo\GamesSaved\ThisIsGamesSavedFolder.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppInfo\MiniMaxForDebug.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppInfo\NewReleaseFile.txt" />
+    <Content Include="AppInfo\Settings.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppInfo\Temp\ThisIsTempFolder.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

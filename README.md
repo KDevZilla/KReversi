@@ -1,0 +1,2 @@
+# KReversi
+ Reversi
