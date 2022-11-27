@@ -118,13 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Reference Image
+    <value>Attribute for Images for non commerical use.
 
 https://www.clipartmax.com/download/m2i8K9K9A0A0G6Z5_clipart-man-png-clip-art-of-3094-clipartwork-person-man-hello-png/
 https://www.nicepng.com/downpng/u2w7o0a9r5i1t4y3_big-image-person-clipart/
 https://www.clipartmax.com/download/m2i8i8i8b1H7H7N4_big-image-female-employee-clipart/
 https://static.wikia.nocookie.net/dilbert/images/f/fe/Images.jpeg/revision/latest?cb=20110203012220
 https://pixabay.com/photos/jesus-religion-church-mercy-1859687/
+
+==============================
+Designed by ddraw / Freepik
+https://www.freepik.com/free-vector/portrait-beautiful-woman-with-long-hair_29359811.htm
+https://www.freepik.com/free-vector/beautiful-skater-girl_9146898.htm
+
+Designed by pikisuperstar / Freepik
+https://www.freepik.com/free-vector/flat-design-samurai-background_17620762.htm
+https://www.freepik.com/free-vector/flat-design-samurai-background_17620764.htm
+
+==============================
+
 
 The copyright of the character appears in this program belongs to their respective owners.
 I do not own nor claim to own any of the original character appears in the programs
@@ -135,13 +147,14 @@ Reference Code
 This programme cannot be finished without consulting the below articles. 
 You can check the references if you would like to look for more information.
 
-https://www.codeproject.com/Articles/4672/Reversi-in-C
 https://www.codeproject.com/Articles/24461/Reversi
+https://www.codeproject.com/Articles/4672/Reversi-in-C
 https://github.com/clarkkev/othello-ai/blob/master/src/othellosaurus/Board.java
 https://github.com/BSmith156/Othello-AI
 https://en.wikipedia.org/wiki/Minimax
 https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
 https://stackoverflow.com/questions/6468024/how-to-change-combobox-background-color-not-just-the-drop-down-list-part
-https://stackoverflow.com/questions/57124243/winforms-dark-title-bar-on-windows-10</value>
+https://stackoverflow.com/questions/57124243/winforms-dark-title-bar-on-windows-10
+https://stackoverflow.com/questions/21325661/convert-an-image-selected-by-path-to-base64-string</value>
   </data>
 </root>
