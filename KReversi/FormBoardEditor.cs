@@ -58,18 +58,17 @@ namespace KReversi
 
             Utility.UI.MakeFormCaptionToBeDarkMode(this, Global.CurrentTheme.IsFormCaptionDarkMode);
 
+            toolStripMenuItemRecentlyEmpty.Click += ToolStripMenuItemRecentlyEmpty_Click;
+            RenderRecentlyBoardOpenFileMenu();
 
             if (boardValueForOpenning != null)
             {
                 OpenBoard(boardValueForOpenning);
                 return;
             }
-
-
             New();
             btnBlack_Click(null, null);
-            toolStripMenuItemRecentlyEmpty.Click += ToolStripMenuItemRecentlyEmpty_Click;
-            RenderRecentlyBoardOpenFileMenu();
+
 
 
         }
