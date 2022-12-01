@@ -278,6 +278,9 @@ namespace KReversi.AI
 
             PositionScore BestScore = new PositionScore(-1, -1);
 
+            /* If it is final move
+               calculate the score then return
+            */
             if (isFinalMove)
             {
                 //   int Score = this.EvaluateBoard(Para.board);
@@ -315,6 +318,7 @@ namespace KReversi.AI
             {
                 BestScore.Score = int.MinValue;
             }
+            // For Supporting sort node before doing Minimax
             if (IsSortedNode && Para.Depth >= this.FirstLevelDepth - 1)
             {
                 LogDebug(methodName + "IsSortedNode is true");
@@ -362,7 +366,10 @@ namespace KReversi.AI
                 }
                 // avilableMovePositions = SortedList.ToList();
             }
+            // End For Supporting sort node before doing Minimax
 
+
+            //Begin doing Minimax
             LogDebug(methodName + "Before loop");
             foreach (Position nextMove in avilableMovePositions)
             {
@@ -375,6 +382,7 @@ namespace KReversi.AI
 
                 ((Board)childPara.board).PutAndAlsoSwithCurrentTurn(nextMove, DiskColor);
                 LogDebug(methodName + " After put");
+                // For Viewing Minimax later
                 if (IsKeepingChildValue)
                 {
                     Para.child.Add(childPara);

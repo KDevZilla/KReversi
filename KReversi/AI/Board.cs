@@ -209,22 +209,17 @@ namespace KReversi.AI
             SetCell(4, 3, CellValue.Black);
             SetCell(4, 4, CellValue.White);
             listPutPosition.Clear();
-            // Initial();
         }
 
         public Board(Board OriginalBoard)
         {
             boardMatrix = new int[8, 8];
-
-
-
             Array.Copy(OriginalBoard.boardMatrix, this.boardMatrix, this.boardMatrix.Length);
             this.CurrentTurn = OriginalBoard.CurrentTurn;
             if (OriginalBoard.LastPutPosition != null)
             {
                 this.SetLastPutPosition(OriginalBoard.LastPutPosition.Clone());
             }
-
         }
 
         private void SetCell(Position pPostion, int iValue)
