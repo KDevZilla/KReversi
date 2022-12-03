@@ -4,6 +4,7 @@ using KReversi;
 using KReversi.AI;
 using System.Diagnostics;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace KReversiUnitTest
 {
@@ -222,6 +223,36 @@ namespace KReversiUnitTest
 
                 Test.Assert(!CanPut, "Check at ::" + posInvalid[i].Row + "_" + posInvalid[i].Col);
             }
+        }
+
+
+        [TestMethod]
+        public void BoardGenerateMove()
+        {
+            int NoofBlackDisk = 0;
+            int NoofWhiteDisk = 0;
+            KReversi.AI.Board board = new KReversi.AI.Board();
+            board = BoardUtil.CreateStandardReversiBoard();
+          
+            board.SetCellsByRow(0, "B BBBBB ");
+            board.SetCellsByRow(1, "B WWWWWB");
+            board.SetCellsByRow(2, "BWWWBWWB");
+            board.SetCellsByRow(3, "BWWWWBWB");
+            board.SetCellsByRow(4, "BBBWWWWB");
+            board.SetCellsByRow(5, "BWBBWWWB");
+            board.SetCellsByRow(6, "BWWWWWW ");
+            board.SetCellsByRow(7, "BBBBBBBB");
+
+            Position pos = new Position(0, 7);
+            board.PutAndAlsoSwithCurrentTurn(pos, Board.PlayerColor.Black);
+            List<Position> listpos = board.generateMoves();
+            Assert.IsTrue(listpos.Count == 0);
+
+            board.SwitchTurnDueToPlayerPass();
+            listpos = board.generateMoves();
+
+            Assert.IsTrue(listpos.Count == 3);
+
         }
 
 

@@ -621,6 +621,7 @@ Please check in the log
                 if (CanPlayer1MakeMove)
                 {
                     PlayerColorForNextTurn = this.Player1Color;
+                   // board.CurrentTurn = this.Player1Color;
                 }
             }
 
@@ -646,6 +647,7 @@ Please check in the log
                         this.UIBoard.InformPlayer2NeedtoPass();
                     }
                     board.SwitchTurnDueToPlayerPass();
+                    UIBoard.RenderBoard();
                 }
             }
 
@@ -770,6 +772,7 @@ Please check in the log
                         this.UIBoard.InformPlayer1NeedtoPass();
                     }
                     board.SwitchTurnDueToPlayerPass();
+                    UIBoard.RenderBoard();
                 }
             }
 
