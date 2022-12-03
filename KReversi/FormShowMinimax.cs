@@ -130,6 +130,12 @@ namespace KReversi
         public MiniMaxParameterExtend Para { get; set; }
         private void Initial()
         {
+            if(!System.IO.File.Exists (FileUtility.MiniMaxParameterForDebugFilePath))
+            {
+                UI.Dialog.ShowMessage("There is no file. Please look into Game->Configure menu to learn more detail how to use this function.");
+                return;
+            }
+
             Para = SerializeUtility.DeSerializeMiniMaxParameterExtend(FileUtility.MiniMaxParameterForDebugFilePath);
             this.CurrentBoard = (Board)Para.board;
 
