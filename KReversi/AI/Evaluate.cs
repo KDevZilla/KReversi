@@ -42,13 +42,11 @@ namespace KReversi.AI
                 return Environment.NewLine +
                     "NoofPossibleMove::" + NoofPossibleMove + Environment.NewLine +
                     "NoofStableDisk::" + NoofStableDisk + Environment.NewLine +
-
                     "ScoreStableDiskWeight::" + ScoreStableDiskWeight + Environment.NewLine +
                     "ScorePositionWeight::" + ScorePositionWeight + Environment.NewLine +
                     "ScorePassWeight::" + ScorePassWeight + Environment.NewLine +
                     // "ScoreAvilableMoveWeight::" + ScoreAvilableMoveWeight + Environment.NewLine +
                     "ScoreDiskCanFlip::" + ScoreDiskCanFlip + Environment.NewLine;
-
 
             }
             public static EvaluateScore operator -(EvaluateScore a, EvaluateScore b)
@@ -71,12 +69,7 @@ namespace KReversi.AI
 
 
         }
-        /*
-        public int evaluateBoardForOponent(IBoard board, bool IsMyturn)
-        {
-            throw new NotImplementedException();
-        }
-        */
+
 
         public int ForcePassSocre { get; set; }
         public int StableDiskScore { get; set; }
@@ -124,10 +117,6 @@ namespace KReversi.AI
             int EvaluateScore = getScore(board, IsMyturn, BotColor);
             LogDebugL2("EvaluateScore::" + EvaluateScore);
             return EvaluateScore;
-
-            //return OponenetScore / MyScore;
-            //return (int)(MyScore - OponenetScore);
-            // return (int)( OponenetScore / MyScore);
         }
         public int ScoreNumberMoveAtBegingGame { get; private set; }
         public int ScoreNumberMoveAtMiddleGame { get; private set; }
@@ -284,7 +273,31 @@ namespace KReversi.AI
             // return ScorePositionWeight;
         }
 
+        public int getScore(Board board, bool IsMyTurn, Board.PlayerColor BotColor)
+        {
+            var boardphase = board.BoardPhase;
+            EvaluateScore BotScore = new EvaluateScore();
+            EvaluateScore OpponentScore = new EvaluateScore();
 
+            bool IsUseStatbleDiskScore = this.StableDiskScore != 0;
+            bool IsUseAvailableScore = this.ScoreNumberMove(boardphase) != 0;
+            // bool IsUseScoreFromPosition = true;
+
+            LogDebugL2("IsUseStatbleDiskScore::" + IsUseStatbleDiskScore);
+            LogDebugL2("IsUseAvailableScore::" + IsUseAvailableScore);
+            LogDebugL2("IsUseScoreFromPosition::" + IsUseScoreFromPosition);
+
+            int[,] positionScore = PositionScore(boardphase);
+
+            return Calculate(board, IsMyTurn, BotColor,
+                BotScore,
+                OpponentScore,
+                positionScore,
+                this.StableDiskScore,
+                this.ScoreNumberMove(boardphase),
+                IsUseScoreFromPosition);
+
+        }
         public int Calculate(Board board, bool IsMyTurn, Board.PlayerColor BotColor,
             EvaluateScore BotScore,
             EvaluateScore OpponentScore,
@@ -294,16 +307,10 @@ namespace KReversi.AI
             Boolean IsUseScoreFromPosition)
         {
 
-
-
             bool IsUseStatbleDiskScore = StableDiskScore != 0;
 
             LogDebugL2("IsUseStatbleDiskScore::" + IsUseStatbleDiskScore);
-
             LogDebugL2("IsUseScoreFromPosition::" + IsUseScoreFromPosition);
-
-
-
 
             Board.PlayerColor OppoColor = board.GetOponentValue(BotColor); // ((Board)board).OpponentTurn;
             List<Position> listNoofPossibleMoveForBot = board.generateMoves(BotColor);
@@ -385,28 +392,18 @@ namespace KReversi.AI
                 BotScore.ScoreStableDiskWeight = BotScore.NoofStableDisk * StableDiskScore;
                 OpponentScore.ScoreStableDiskWeight = OpponentScore.NoofStableDisk * StableDiskScore;
             }
-            /*
-            if (IsUseAvailableScore)
-            {
-                BotScore.ScoreAvilableMoveWeight = MobilityPieceScore * BotScore.NoofPossibleMove;
-                OpponentScore.ScoreAvilableMoveWeight = MobilityPieceScore * OpponentScore.NoofPossibleMove;
-            }
-            */
+
 
             BotScore.NoofDiskCanFlip = GetNoofDiskCanBeFlipped(board, BotColor, listNoofPossibleMoveForBot);
             OpponentScore.NoofDiskCanFlip = GetNoofDiskCanBeFlipped(board, OppoColor, listNoofPossibleMoveForOpponent);
             BotScore.ScoreDiskCanFlip = MobilityPieceScore * BotScore.NoofDiskCanFlip;
             OpponentScore.ScoreDiskCanFlip = MobilityPieceScore * OpponentScore.NoofDiskCanFlip;
 
-            // int test =GetNoStableDisk ()
-            //  int StableDiskScore = 50;
-
             LogDebugL2("===BotScore");
             LogDebugL2("BotScore.NoofPossbleMove::" + BotScore.NoofPossibleMove);
             LogDebugL2("BotScore.NoofStableDisk::" + BotScore.NoofStableDisk);
 
             LogDebugL2("BotScore.ScoreStableDiskWeight::" + BotScore.ScoreStableDiskWeight);
-            //  LogDebugL2("BotScore.ScoreAvilableMoveWeight::" + BotScore.ScoreAvilableMoveWeight);
             LogDebugL2("BotScore.ScorePositionWeight::" + BotScore.ScorePositionWeight);
             LogDebugL2("BotScore.ScorePassWeight::" + BotScore.ScorePassWeight);
             LogDebugL2("BotScore.ScoreDiskCanFlip::" + BotScore.ScoreDiskCanFlip);
@@ -416,7 +413,6 @@ namespace KReversi.AI
             LogDebugL2("OpponentScore.NoofStableDisk::" + OpponentScore.NoofStableDisk);
 
             LogDebugL2("OpponentScore.ScoreStableDiskWeight::" + OpponentScore.ScoreStableDiskWeight);
-            //  LogDebugL2("OpponentScore.ScoreAvilableMoveWeight::" + OpponentScore.ScoreAvilableMoveWeight);
             LogDebugL2("OpponentScore.ScorePositionWeight::" + OpponentScore.ScorePositionWeight);
             LogDebugL2("OpponentScore.ScorePassWeight::" + OpponentScore.ScorePassWeight);
             LogDebugL2("OpponentScore.ScoreDiskCanFlip::" + OpponentScore.ScoreDiskCanFlip);
@@ -426,149 +422,7 @@ namespace KReversi.AI
 
             return ScoreTotal;
         }
-        public int getScore(Board board, bool IsMyTurn, Board.PlayerColor BotColor)
-        {
 
-
-            var boardphase = board.BoardPhase;
-
-            EvaluateScore BotScore = new EvaluateScore();
-            EvaluateScore OpponentScore = new EvaluateScore();
-
-            bool IsUseStatbleDiskScore = this.StableDiskScore != 0;
-            bool IsUseAvailableScore = this.ScoreNumberMove(boardphase) != 0;
-            // bool IsUseScoreFromPosition = true;
-
-            LogDebugL2("IsUseStatbleDiskScore::" + IsUseStatbleDiskScore);
-            LogDebugL2("IsUseAvailableScore::" + IsUseAvailableScore);
-            LogDebugL2("IsUseScoreFromPosition::" + IsUseScoreFromPosition);
-
-            int[,] positionScore = PositionScore(boardphase);
-
-            return Calculate(board, IsMyTurn, BotColor,
-                BotScore,
-                OpponentScore,
-                positionScore,
-                this.StableDiskScore,
-                this.ScoreNumberMove(boardphase),
-                IsUseScoreFromPosition);
-            /*
-            Board.PlayerColor OppoColor = board.GetOponentValue(BotColor); // ((Board)board).OpponentTurn;
-            List<Position> listNoofPossibleMoveForBot = board.generateMoves(BotColor);
-            List<Position> listNoofPossibleMoveForOpponent = board.generateMoves(OppoColor);
-            BotScore.NoofPossibleMove  = listNoofPossibleMoveForBot.Count;
-            OpponentScore.NoofPossibleMove = listNoofPossibleMoveForOpponent.Count;
-
-            Boolean IsEndGame = false;
-            Boolean IsIWon = false;
-            Boolean IsDraw = false;
-
-            if (BotScore.NoofPossibleMove  == 0 &&
-                OpponentScore.NoofPossibleMove  == 0)
-            {
-                IsEndGame = true;
-            }
-
-            if (IsUseScoreFromPosition)
-            {
-                GetScoreFromPosition((Board)board, positionScore, BotColor, BotScore,
-                    OpponentScore);
-            }
-            if (IsEndGame)
-            {
-                LogDebugL2("IsEndGame is true");
-                if (BotScore.DiskCount  == OpponentScore.DiskCount)
-                {
-                    IsDraw = true;
-                    LogDebugL2("IsDraw is true");
-                }
-                else
-                {
-                    IsIWon = BotScore.DiskCount  > OpponentScore.DiskCount;
-                    LogDebugL2("IsIWon is true");
-                }
-               
-                if (IsDraw)
-                {
-                    return 0;
-                }
-                if (IsIWon)
-                {
-                    return WonScore;
-                }
-
-                return LostScore;
-            }
-
-            Boolean IsINeedtoPass = false;
-            Boolean IsEnemyNeedtoPass = false;
-            if (OpponentScore.NoofPossibleMove == 0 &&
-                BotScore.NoofPossibleMove > 0)
-            {
-                IsEnemyNeedtoPass = true;
-            }
-
-            if (BotScore.NoofPossibleMove == 0 &&
-                OpponentScore.NoofPossibleMove > 0)
-            {
-                IsINeedtoPass = true;
-            }
-
-            if (IsEnemyNeedtoPass)
-            {
-                BotScore.ScorePassWeight += this.ForcePassSocre;
-            }
-            if (IsINeedtoPass)
-            {
-                OpponentScore.ScorePassWeight += this.ForcePassSocre;
-            }
-
-            if (IsUseStatbleDiskScore)
-            {
-                
-                BotScore.NoofStableDisk = GetNoStableDisk(board, BotColor);
-                OpponentScore.NoofStableDisk = GetNoStableDisk(board, OppoColor);
-                BotScore.ScoreStableDiskWeight = BotScore.NoofStableDisk * StableDiskScore;
-                OpponentScore.ScoreStableDiskWeight = OpponentScore.NoofStableDisk * StableDiskScore;
-            }
-            
-            if (IsUseAvailableScore)
-            {
-                BotScore.ScoreAvilableMoveWeight = ScoreNumberMove(boardphase) * BotScore.NoofPossibleMove;
-                OpponentScore.ScoreAvilableMoveWeight = ScoreNumberMove(boardphase) * OpponentScore.NoofPossibleMove;
-            }
-            int ScoreDiskCanFlip = 10;
-            BotScore.ScoreDiskCanFlip =ScoreDiskCanFlip * GetNoofDiskCanBeFlipped(board, BotColor, listNoofPossibleMoveForBot);
-            OpponentScore.ScoreDiskCanFlip =ScoreDiskCanFlip * GetNoofDiskCanBeFlipped(board, OppoColor, listNoofPossibleMoveForOpponent);
-            // int test =GetNoStableDisk ()
-            //  int StableDiskScore = 50;
-
-            LogDebugL2("===BotScore");
-            LogDebugL2("BotScore.NoofPossbleMove::" + BotScore.NoofPossibleMove);
-            LogDebugL2("BotScore.NoofStableDisk::" + BotScore.NoofStableDisk);
-
-            LogDebugL2("BotScore.ScoreStableDiskWeight::" + BotScore.ScoreStableDiskWeight);
-            LogDebugL2("BotScore.ScoreAvilableMoveWeight::" + BotScore.ScoreAvilableMoveWeight);
-            LogDebugL2("BotScore.ScorePositionWeight::" + BotScore.ScorePositionWeight );
-            LogDebugL2("BotScore.ScorePassWeight::" + BotScore.ScorePassWeight);
-            LogDebugL2("BotScore.ScoreDiskCanFlip::" + BotScore.ScoreDiskCanFlip);
-
-            LogDebugL2("===OpponentScore");
-            LogDebugL2("OpponentScore.NoofPossbleMove::" + OpponentScore.NoofPossibleMove);
-            LogDebugL2("OpponentScore.NoofStableDisk::" + OpponentScore.NoofStableDisk);
-
-            LogDebugL2("OpponentScore.ScoreStableDiskWeight::" + OpponentScore.ScoreStableDiskWeight);
-            LogDebugL2("OpponentScore.ScoreAvilableMoveWeight::" + OpponentScore.ScoreAvilableMoveWeight);
-            LogDebugL2("OpponentScore.ScorePositionWeight::" + OpponentScore.ScorePositionWeight);
-            LogDebugL2("OpponentScore.ScorePassWeight::" + OpponentScore.ScorePassWeight);
-            LogDebugL2("OpponentScore.ScoreDiskCanFlip::" + OpponentScore.ScoreDiskCanFlip);
-            EvaluateScore ResultScore = BotScore - OpponentScore;
-
-            int ScoreTotal = ResultScore.GetTotalScore();
-
-            return ScoreTotal;
-            */
-        }
         //private void AddPostionToHash()
         public int GetNoofDiskCanBeFlipped(Board board, Board.PlayerColor color, List<Position> possibleMoves)
         {

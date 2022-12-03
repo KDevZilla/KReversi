@@ -40,16 +40,9 @@ namespace KReversi.AI
 
             EvaluateObject = pEvaluateObject;
 
-            //  EvaluateObject = new Evaluate1();
-
             Position move = new Position(-1, -1);
 
-
-
-
             PositionScore bestMove = new PositionScore();
-
-
 
             MiniMaxParameterExtend Para = new MiniMaxParameterExtend();
 
@@ -78,14 +71,12 @@ namespace KReversi.AI
             move = new Position(score.Row,
                 score.Col);
             timeM.Finish();
-            int i;
+
             Log("CalculateNextMove :: [" + score.Row + "," + score.Col + "]");
             Log("CalculateNextMove :: Score::" + score.Score);
             Log("CalculateNextMove :: iCountHashCanAccess::" + iCountHashCanAccess);
             Log("CalculateNextMove ::  Before Get Random");
 
-            // Boolean IsUsingRandomIfNodeValueIsTheSame =true    ;
-            // IsUsingRandomIfNodeValueIsTheSame = false;
             if (Para.board.NumberofBothDisk() <= 14)
             {
                 if (IsUsingRandomIfNodeValueIsTheSame)
@@ -98,21 +89,12 @@ namespace KReversi.AI
 
                 }
             }
-            /*
-            if (((Board)Para.board).NumberofBothDisk() <= 64)
-            {
-               
-            }
-            */
-
 
             //NodeCount = 0;
             Log("CalculateNextMove :: hashTranportable :: " + hashTranportable.NumberofNodeCount());
 
             Log("CalculateNextMove :: [" + score.Row + "," + score.Col + "]");
             Log("CalculateNextMove :: Score::" + score.Score);
-
-
             Log("CalculateNextMove :: NodeCount ::" + NodeCount);
             Log("CalculateNextMove :: EvaluateCount ::" + EvaluateCount);
             Log("CalculateNextMove :: Time takes (Seconds)::" + timeM.TimeTakes.Milliseconds / 1000.00);
@@ -196,7 +178,7 @@ namespace KReversi.AI
         }
         private int FirstLevelDepth = 0;
         private List<PositionScore> listFirstLevelDepthMoves = null;
-        private Hash hashTranportable = new Hash();
+        private Hash hashTranportable = new Hash(); //To keep The board hash value
         private int iCountHashCanAccess = 0;
 
 
@@ -216,7 +198,7 @@ namespace KReversi.AI
 
             Board.PlayerColor DiskColor = Para.BotColor;
             Board.PlayerColor OpponentColor = ((Board)Para.board).GetOponentValue(Para.BotColor);
-            //            Board.PlayerColor BotColor = Board.PlayerColor.Black;
+
             LogDebug(methodName + "IsMax::" + Para.IsMax);
             if (!Para.IsMax)
             {
@@ -230,7 +212,6 @@ namespace KReversi.AI
             if (IsExceedTimeLimitPermove())
             {
                 LogDebug(methodName + " Exceed Time");
-
             }
             bool IsNeedtoPass = false;
 
@@ -261,7 +242,6 @@ namespace KReversi.AI
                     else
                     {
                         avilableMovePositionsForOppositeColor = ((Board)Para.board).generateMoves(Para.BotColor);
-
                         DiskColor = Para.BotColor;
                         LogDebug(methodName + "Gen possbileMove from BotColor it is " + avilableMovePositions.Count);
                     }
@@ -283,9 +263,6 @@ namespace KReversi.AI
             */
             if (isFinalMove)
             {
-                //   int Score = this.EvaluateBoard(Para.board);
-
-
                 int BoardHash = Hash.GetHashForBoard(Para.board);
                 int Score = 0;
                 if (hashTranportable.ContainEvalScore(BoardHash))
@@ -296,11 +273,9 @@ namespace KReversi.AI
                 else
                 {
 
-                    //  Score = this.EvaluateBoardV2((Board)Para.board, IsMyTurn, Para.BotColor);
                     EvaluateCount++;
                     Score = this.EvaluateObject.evaluateBoard(Para.board, IsMyTurn, Para.BotColor);
 
-                    // Score = this.EvaluateBoard(Para.board);
                     hashTranportable.AddEvalScore(BoardHash, Score);
                     LogDebug("hashPutEvalScore::" + Para.board.LastPutPosition.PositionString());
 
@@ -312,13 +287,14 @@ namespace KReversi.AI
 
             }
 
-            //int bestBoardValue = 0;
+
             BestScore = new PositionScore(int.MaxValue, -1, -1);
             if (Para.IsMax)
             {
                 BestScore.Score = int.MinValue;
             }
             // For Supporting sort node before doing Minimax
+            // We don't sort the node at everydepth 
             if (IsSortedNode && Para.Depth >= this.FirstLevelDepth - 1)
             {
                 LogDebug(methodName + "IsSortedNode is true");
@@ -331,10 +307,8 @@ namespace KReversi.AI
                     Board tempBoard = (Board)Para.board.Clone();
 
                     tempBoard.PutAndAlsoSwithCurrentTurn(nextMove, DiskColor);
-
                     EvaluateCount++;
                     int Score = this.EvaluateObject.evaluateBoard(tempBoard, IsMyTurn, Para.BotColor);
-
 
                     lstPostion.Add(new PositionScore(Score, nextMove.Row, nextMove.Col));
                     DicBoard.Add(nextMove.GetHashCode(), tempBoard);
@@ -354,7 +328,6 @@ namespace KReversi.AI
                     SortedList = lstPostion.OrderBy(o => o.Score).ToList();
                 }
 
-                //foreach (Position move in allPossibleMoves)
                 LogDebug("Max Begin ViewSortedList");
                 avilableMovePositions.Clear();
                 foreach (PositionScore move in SortedList)
@@ -364,7 +337,7 @@ namespace KReversi.AI
 
                     avilableMovePositions.Add(new Position(move.Row, move.Col));
                 }
-                // avilableMovePositions = SortedList.ToList();
+                
             }
             // End For Supporting sort node before doing Minimax
 
@@ -418,8 +391,6 @@ namespace KReversi.AI
                     //hashTranportable.Add(BoardHash, childScore.Score);
                 }
                 childPara.PositionScore = new PositionScore(childScore.Score, nextMove);
-
-
 
                 if (Para.Depth == this.FirstLevelDepth)
                 {
