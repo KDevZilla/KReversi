@@ -66,31 +66,25 @@ namespace KReversi.AI
     public class MiniMaxParameterExtend : MiniMaxParameter
     {
         public List<MiniMaxParameterExtend> child = new List<MiniMaxParameterExtend>();
-        //public int Score = 0;
         public PositionScore PositionScore { get; set; } = new PositionScore();
         public MiniMaxParameterExtend CloneExtendWithoutBoard()
         {
             MiniMaxParameterExtend CloneObject = new MiniMaxParameterExtend();
             CloneObject.Depth = this.Depth;
-            // CloneObject.board = this.board.Clone();
             CloneObject.IsMax = this.IsMax;
             CloneObject.Alpha = this.Alpha;
             CloneObject.Beta = this.Beta;
             CloneObject.BotColor = this.BotColor;
-            // CloneObject.Score = this.Score;
             if (this.PositionScore != null)
             {
                 CloneObject.PositionScore = this.PositionScore.ClonePositionScore();
             }
-            //CloneObject.child = 
             return CloneObject;
         }
         public MiniMaxParameterExtend CloneExtend()
         {
             MiniMaxParameterExtend CloneObject = CloneExtendWithoutBoard();
             CloneObject.board = (Board)this.board.Clone();
-
-
             return CloneObject;
         }
     }

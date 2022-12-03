@@ -8,15 +8,13 @@ namespace KReversi.AI
 {
     public class Hash
     {
-        //public int DepthLevel = 0;
-        //public
+
         public static int ScoreForNonExist = int.MaxValue / 2;
 
         public static int GetHashForBoard(Board board)
         {
             return board.GetHashCode() * (int)board.CurrentTurn ;
         }
-       // public Dictionary<int, int> DicHashValue = new Dictionary<int, int>();
         private Dictionary<int, Dictionary<int, int>> DicHash = new Dictionary<int, Dictionary<int, int>>();
         private Dictionary<int, int> DicEvoScore = new Dictionary<int, int>();
         public int NumberofNodeCount()
@@ -56,7 +54,6 @@ namespace KReversi.AI
             }
             DicDepthScore.Add(Depth, Score);
 
-            //DicHashValue.Add(HashCodeForBoard, Score);
         }
         public void AddEvalScore(int HashCodeForBoard, int Score)
         {
@@ -101,7 +98,5 @@ namespace KReversi.AI
         {
             return GetEvalScore(HashCodeForBoard) != ScoreForNonExist;
         }
-       
-
     }
 }
