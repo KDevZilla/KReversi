@@ -183,20 +183,18 @@ namespace KReversi.AI
         public Board(BoardValue pBoardValue)
         {
             this.boardMatrix = pBoardValue.boardMatrix;
-            //    this._listPutPosition = new List<Position>(pBoardValue.listPutPosition);
+
             this.CurrentTurnNumber = pBoardValue.CurrentTurnNumber;
             this.CurrentTurn = (PlayerColor)pBoardValue.Turn;
 
-            //  Initial();
         }
         public BoardValue GetBoardValue()
         {
             BoardValue boardValue = new BoardValue();
-            //boardValue.boardMatrix = this.boardMatrix;
+
             boardValue.boardMatrix = new int[8, 8];
             Array.Copy(this.boardMatrix, boardValue.boardMatrix, this.boardMatrix.Length);
 
-            //   boardValue.listPutPosition = new List<Position>(this._listPutPosition);
             boardValue.CurrentTurnNumber = this.CurrentTurnNumber;
             boardValue.Turn = (int)this.CurrentTurn;
             return boardValue;
