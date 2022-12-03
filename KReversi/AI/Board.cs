@@ -42,12 +42,12 @@ namespace KReversi.AI
 
         public int[,] boardMatrix;
 
-
+        
         /*
          * Don't use array as property because it might be slow
          * Also for indexing, It might be so slow
          * Need Time to benchmark on Release build
-         * For not avoid using it first.
+         * For now avoid using it first.
          * http://msdn.microsoft.com/en-us/library/0fss9skc.aspx
          * https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1819
          * 

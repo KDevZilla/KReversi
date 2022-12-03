@@ -15,10 +15,13 @@ namespace KReversi.AI
         {
 
         }
-
+        /*
+         These value will be set to Evaluate object.
+         The main purpose of this class is to hold these value
+         */
         public int ForcePassSocre { get; set; } = 1000;
         public int StableDiskScore { get; set; } = 10;
-        public int TimeLimitPermove { get; set; } = 3;
+        public int TimeLimitPermove { get; set; } = 3;// Number of second bot allowed to think in each turn.
         // public Boolean AllowRandom { get; set; } = false;
 
         public int ScoreNumberMoveAtBegingGame { get; set; }
@@ -29,9 +32,19 @@ namespace KReversi.AI
         public int DepthLevelAtBeginGame { get; set; }
         public int DepthLevelAtMiddleGame { get; set; }
         public int DepthLevelAtEndGame { get; set; }
-        // public string PhotoFileName { get; set; }
+        
         public string BotName { get; set; }
+
         public string Base64Image { get; set; }
+        // public string PhotoFileName { get; set; }
+        // As of now don't use FileName, use Base64Image instead.
+
+
+
+        /*
+         These are default value of PostionScore
+         For Open, Mid, End game.
+        */
         public int[,] OpenGamePostionScore = new int[,] {
             { 100, -50, 20, 5, 5, 20, -50, 100},
             {-50 , -70, -5, -5, -5, -5, -70, -50},
@@ -68,7 +81,7 @@ namespace KReversi.AI
 
         public int DepthLevel(Board.BoardPhaseEnum boardPhase)
         {
-
+            //Select depth level according to the BoardPhase
             int depthLevel = 0;
             switch (boardPhase)
             {
@@ -116,16 +129,11 @@ namespace KReversi.AI
         public Position MakeMove(IBoard pBoard)
         {
 
-
-
             Board.PlayerColor BotColor = ((Board)pBoard).CurrentTurn;
             int depthLevel = DepthLevel(((Board)pBoard).BoardPhase);
 
             Utility.TimeMeasure time = new Utility.TimeMeasure();
             time.Start();
-            //Boolean IsUsingAlphaBeta = true;
-            //Boolean IsKeepingChildValue = false ;
-            // Boolean IsUsingRandomIfNodeValueIsTheSame = true;
             Boolean IsSortedNode = true;
             if (m == null)
             {
@@ -143,60 +151,41 @@ namespace KReversi.AI
                 );
             time.Finish();
             String strTemp = time.TimeTakes.Seconds.ToString();
-
             return result;
 
         }
         public static MiniMaxBotProto CreateBot(String fileName)
         {
-            // throw new NotImplementedException();
+
             MiniMaxBotProto Newbot = Utility.SerializeUtility.DeserializeMinimaxBot(fileName);
             Newbot.FillEvaluateObject();
-            //Newbot.Evaluate.ScoreNumberMoveAtBegingGame = Newbot.ScoreNumberMoveAtBegingGame;
-
             return Newbot;
-
-
 
         }
         public static MiniMaxBotProto CreateBot()
         {
-            //BasicMiniMaxEvaluate basicEva = new BasicMiniMaxEvaluate();
-            //basicEva.SetOpenGamePostionScore ()
+            //These are default value
+            //They will be used incase we don't load Botvalue then FillEvaluateObject
+            //
+            MiniMaxBotProto minimaxBorProto = new MiniMaxBotProto();
+            minimaxBorProto.DepthLevelAtBeginGame = 2;
+            minimaxBorProto.DepthLevelAtMiddleGame = 3;
+            minimaxBorProto.DepthLevelAtEndGame = 5;
 
+            minimaxBorProto.ScoreNumberMoveAtBegingGame = 10;
+            minimaxBorProto.ScoreNumberMoveAtMiddleGame = 40;
+            minimaxBorProto.ScoreNumberMoveAtEndGame = 20;
 
-            MiniMaxBotProto M1 = new MiniMaxBotProto();
-            M1.DepthLevelAtBeginGame = 2;
-            M1.DepthLevelAtMiddleGame = 3;
-            M1.DepthLevelAtEndGame = 5;
-
-
-            M1.ScoreNumberMoveAtBegingGame = 10;
-            M1.ScoreNumberMoveAtMiddleGame = 40;
-            M1.ScoreNumberMoveAtEndGame = 20;
-
-
-
-            M1.DepthLevelAtBeginGame = 2;
-            M1.DepthLevelAtMiddleGame = 2;
-            M1.DepthLevelAtEndGame = 2;
-
-
-
+            minimaxBorProto.DepthLevelAtBeginGame = 2;
+            minimaxBorProto.DepthLevelAtMiddleGame = 2;
+            minimaxBorProto.DepthLevelAtEndGame = 2;
 
             //IEvaluate Evu = new BasicMiniMaxEvaluate();
 
-            M1.Evaluate = new BasicMiniMaxEvaluate(M1);
+            minimaxBorProto.Evaluate = new BasicMiniMaxEvaluate(minimaxBorProto);
+            return minimaxBorProto;
+        }
 
-            //  M1.Evaluate.evaluateBoardForOponent 
-            return M1;
-        }
-        /*
-        public Position MakeMove(IBoard pBoard)
-        {
-            throw new NotImplementedException();
-        }
-        */
 
     }
 }
