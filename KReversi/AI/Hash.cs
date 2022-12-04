@@ -15,6 +15,14 @@ namespace KReversi.AI
         {
             return board.GetHashCode() * (int)board.CurrentTurn ;
         }
+        /* For DicHash
+                int is Hashvalue
+                Dictionary<int,int>	is DicDepthScore
+            For DicCepthScore
+                First int is the depth level
+                Second int is the score.
+
+        */
         private Dictionary<int, Dictionary<int, int>> DicHash = new Dictionary<int, Dictionary<int, int>>();
         private Dictionary<int, int> DicEvoScore = new Dictionary<int, int>();
         public int NumberofNodeCount()

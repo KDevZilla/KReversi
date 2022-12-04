@@ -258,7 +258,9 @@ namespace KReversi.AI
 
             PositionScore BestScore = new PositionScore(-1, -1);
 
-            /* If it is final move
+            /* 
+             * 2. Handle case of Finalmove
+                If it is final move
                calculate the score then return
             */
             if (isFinalMove)
