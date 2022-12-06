@@ -11,7 +11,7 @@ Main game.
 ![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/Create_Bot.png)  
 Create bot feature.  
 
-For Developer please look at this article
+For Developer please look at this article  
 https://github.com/KDevZilla/ArticlesPublic/blob/main/KReversi.md
 
 
