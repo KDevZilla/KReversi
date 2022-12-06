@@ -42,6 +42,12 @@ namespace KReversi
 
             treeView1.Nodes.Clear();
             TreeNode tn = treeView1.Nodes.Add("Root");
+            if(Para.PositionScore.Score ==0 &&
+                Para.IsMax &&
+                Para.Alpha != 0)
+            {
+                Para.PositionScore.Score = Para.Alpha;
+            }
             RenderTree(Para, tn );
             this.Width  = pictureBoard.Left + pictureBoard.Width + 20;
             this.btnClose.Left = this.Width - this.btnClose.Width - 20;
