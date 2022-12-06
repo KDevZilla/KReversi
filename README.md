@@ -11,9 +11,10 @@ Main game.
 ![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/Create_Bot.png)  
 Create bot feature.  
 
-For Developer please look at this article  
-https://github.com/KDevZilla/ArticlesPublic/blob/main/KReversi.md
-
+For Developer please look at these articles.
+The contents are the same, I just posted them 2 places.
+https://www.codeproject.com/Articles/5348843/KReversi-Learn-to-Implement-Minimax-Algorithm-by-C  
+https://github.com/KDevZilla/ArticlesPublic/blob/main/KReversi.md  
 
 # Features 
 1. Support Mode Human vs Human, Human vs Bot, Bot vs Bot.
