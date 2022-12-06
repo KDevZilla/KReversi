@@ -13,8 +13,11 @@ Create bot feature.
 
 For Developer please look at these articles.
 The contents are the same, I just posted them 2 places.
-https://www.codeproject.com/Articles/5348843/KReversi-Learn-to-Implement-Minimax-Algorithm-by-C  
+It is just that the gif animation might not do an animation on codeproject.com.
+
 https://github.com/KDevZilla/ArticlesPublic/blob/main/KReversi.md  
+https://www.codeproject.com/Articles/5348843/KReversi-Learn-to-Implement-Minimax-Algorithm-by-C  
+
 
 # Features 
 1. Support Mode Human vs Human, Human vs Bot, Bot vs Bot.
