@@ -18,15 +18,20 @@ namespace KReversi.Utility
                 return getrandom.Next(min, max + 1);
             }
         }
-        public static String NowAsString()
+        public static String NowAsString() => DateTime.Now.ToString("yyyyMMddHHmmssss");
+        /*
         {
             return DateTime.Now.ToString("yyyyMMddHHmmssss");
         }
+        */
         public static String ConvertToReversiNotation(Position position)
+            => ConvertToReversiNotation(position.Row, position.Col);
+        /*
         {
             return ConvertToReversiNotation(position.Row ,position.Col );
 
         }
+        */
         public static String ConvertToReversiNotation(int Row,int Column)
         {
             String stringColumn = "ABCDEFGH";
@@ -47,32 +52,47 @@ namespace KReversi.Utility
         {
             return int.Parse(value);
         }
-        public static Boolean IsBetween(this int value,int MinValue,int MaxValue)
-        {
-           
-            return (value >= MinValue && value <= MaxValue);
-        }
-        public static Boolean IsBetween(this String  value, int MinValue, int MaxValue)
+        public static Boolean IsBetween(this int value, int MinValue, int MaxValue)
+            => value >= MinValue && value <= MaxValue;
+        /*
+    {
+
+        return (value >= MinValue && value <= MaxValue);
+    }
+    */
+        public static Boolean IsBetween(this String value, int MinValue, int MaxValue)
+            => value.ToInt() >= MinValue && value.ToInt() <= MaxValue;
+        /*
         {
             
             return (value.ToInt () >= MinValue && value.ToInt () <= MaxValue);
         }
-
+        */
+        /*
         public static  Position From1DimensionTo2(int index, int NoofRow)
         {
             Position P = new Position(index / NoofRow, index % NoofRow);
             return P;
         }
+        */
+        public static Position From1DimensionTo2(int index, int NoofRow)
+            => new Position(index / NoofRow, index % NoofRow);
+
         public static int From2DimensionTo1(int Row, int Column, int RowSize)
+            => From2DimensionTo1(new Position(Row, Column), RowSize);
+        /*
         {
             return From2DimensionTo1(new Position(Row, Column), RowSize);
         }
+        */
         public static  int From2DimensionTo1(Position pos, int RowSize)
+            => (pos.Row * (RowSize)) + pos.Col;
+        /*
         {
             int Result = (pos.Row * (RowSize)) + pos.Col;
             return Result;
         }
-
+        */
 
 
 
