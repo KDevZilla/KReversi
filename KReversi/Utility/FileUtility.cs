@@ -21,15 +21,8 @@ namespace KReversi.Utility
                 //   logFilePath = logFilePath.Replace(".exe", "");
             }
         }
-        public static string GetBotFileNameFromBotName(String botname)
-        {
-            return BotPath + botname + ".bot";
-        }
-
-        public static string GetBotPhotoFileNameFromBotName(String botname)
-        {
-            return BotImagesPath + botname + ".png";
-        }
+        public static string GetBotFileNameFromBotName(String botname) =>  $"{BotPath}{botname}.bot";
+        public static string GetBotPhotoFileNameFromBotName(String botname) => $@"{BotImagesPath}{botname}.png";
         public static string AppImagePath=> AppInfoPath + @"\AppImages\";
         public static string SettingsPath => AppInfoPath + @"\Settings.bin";
         public static string TempPath => AppInfoPath + @"\Temp\";
@@ -39,23 +32,14 @@ namespace KReversi.Utility
         public static string BotImagesPath =>  AppInfoPath + @"\Bots\BotImages\";
         public static string GameSavedPath => AppInfoPath + @"\GamesSaved\";
         public static string LogFilePath => AppInfoPath + @"\Log.txt";
-        public static string MiniMaxParameterForDebugFilePath => AppInfoPath + @"\MiniMaxForDebug.bin";
+        public static string MiniMaxParameterForDebugFilePath => $@"{AppInfoPath}\MiniMaxForDebug.bin";
         public static string GameRecentlyFile => AppInfoPath + @"\RecentlyGame.bin";
         public static string BoardRecentlyFile => AppInfoPath + @"\RecentlyBoard.bin";
         public static string BotRecentlyFile => AppInfoPath + @"\RecentlyBot.bin";
 
-        public static bool IsFileExist(String fileName)
-        {
-            return System.IO.File.Exists(fileName);
-        }
-        public static  List<String> GetAllBoardName()
-        {
-            return GetAllBoardName(BoardPath);
-        }
-        public static void OpenFolder(String folder)
-        {
-            Process.Start(folder);
-        }
+        public static bool IsFileExist(String fileName) => System.IO.File.Exists(fileName);
+        public static  List<String> GetAllBoardName()=> GetAllBoardName(BoardPath);
+        public static void OpenFolder(String folder)=> Process.Start(folder);
         public static void CopyFileIfItIsDifferentPath(String original, String destination)
         {
             Boolean NeedtoCopy = true;
