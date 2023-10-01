@@ -18,24 +18,17 @@ namespace KReversi.Utility
             RecentlyFile recentlyfile = new RecentlyFile(listFileSize);
             Serailze(recentlyfile, filename);
         }
-        public static void SerializeRecentlyFile(RecentlyFile recentlyfile, String filename)
-        {
-            Serailze(recentlyfile, filename);
-        }
+        public static void SerializeRecentlyFile(RecentlyFile recentlyfile, String filename)=> Serailze(recentlyfile, filename);
+
         public static void CreateNewSettings(String filename)
         {
             KReversiSettings sta = new KReversiSettings();
             Serailze(sta, filename);
         }
-        public static void SerializeSettings(KReversiSettings setting,String filename)
-        {
-            Serailze(setting, filename);
-        }
-        public static void SerializeMiniMaxBot(AI.MiniMaxBotProto sta, String filename)
-        {
-            //Create the stream to add object into it.  
-            Serailze(sta, filename);
-        }
+        public static void SerializeSettings(KReversiSettings setting,String filename) => Serailze(setting, filename);
+
+        public static void SerializeMiniMaxBot(AI.MiniMaxBotProto sta, String filename)=> Serailze(sta, filename);
+
 
         public static void SerializeMiniMaxParameterExtend(MiniMaxParameterExtend Para, String filename)
         {
