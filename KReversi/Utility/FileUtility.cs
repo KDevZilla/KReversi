@@ -12,15 +12,7 @@ namespace KReversi.Utility
     public class FileUtility
     {
 
-        public static string AppInfoPath
-        {
-            get
-            {
-                String ExePath = new Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).LocalPath;
-                return Path.GetDirectoryName(ExePath) + @"\AppInfo";
-                //   logFilePath = logFilePath.Replace(".exe", "");
-            }
-        }
+        public static string AppInfoPath => $@"{Path.GetDirectoryName(new Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).LocalPath)}\AppInfo";       
         public static string GetBotFileNameFromBotName(String botname) =>  $"{BotPath}{botname}.bot";
         public static string GetBotPhotoFileNameFromBotName(String botname) => $@"{BotImagesPath}{botname}.png";
         public static string AppImagePath=> AppInfoPath + @"\AppImages\";
