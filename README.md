@@ -1,18 +1,23 @@
 # KReversi
 
 
-![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/001.png)  
+![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/New/001.png)  
 Select player and map  
 
-![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/000_Main_KReversi.png)  
+![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/New/002.png)  
 Main game.  
 
 
-![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/Create_Bot.png)  
-Create bot feature.  
 
-For Developer, please look at these articles.
-The contents are the same, I just posted them 2 places.
+![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/New/003.png)   
+Create a bot feature.  
+
+
+![Game](https://github.com/KDevZilla/ImageUpload/blob/main/KReversi/New/004.png)  
+It can show the minimax value.  
+
+For developers, please look at these articles.
+The contents are the same, I just posted them in 2 places.
 https://github.com/KDevZilla/ArticlesPublic/blob/main/KReversi.md  
 https://www.codeproject.com/Articles/5348843/KReversi-Learn-to-Implement-Minimax-Algorithm-by-C  
 
@@ -35,14 +40,14 @@ https://www.codeproject.com/Articles/5348843/KReversi-Learn-to-Implement-Minimax
 which is what distinguishes it from a board game, so you can navigate it via the navigate control.
 
 ## How to play ##
-The rule of the game is exactly the same as a normal Reversi game.
+The rules of the game are the same as a normal Reversi game.
 
-## How to setup a project
+## How to set up a project
 1. Just download a project, it is just a small program written in C# Windows Form.
 2. There are 2 projects
       KReversi: This is the main project
-      KReversiUnitTest: This it the test project
+      KReversiUnitTest: This is the test project
 
-3. The nesecially file already being configured as "Copy to Output Directory" so you no need to manually 
-copy or configure anything, jut run the program
-4. For testing the project, you can just run The test cases in in all of test class in KReversiUnitTest project.
+3. The necessary file already being configured as "Copy to Output Directory" so you do not need to manually 
+copy or configure anything, just run the program
+4. For testing the project, you can just run The test cases in all of the test classes in KReversiUnitTest project.
