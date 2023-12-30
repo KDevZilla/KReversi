@@ -202,6 +202,7 @@ namespace KReversi
         private Boolean IsInitalize { get; set; } = false;
         private void FormNewGame_Load(object sender, EventArgs e)
         {
+            this.Icon = Resource1.KReversiIcon;
             SetUpBoardUI();
             LoadBoardToCombo();
             LoadPlayerToComboBox();

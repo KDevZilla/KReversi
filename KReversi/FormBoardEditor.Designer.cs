@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBoardEditor));
             this.btnBlack = new System.Windows.Forms.Button();
             this.btnWhite = new System.Windows.Forms.Button();
             this.btnBlank = new System.Windows.Forms.Button();
@@ -341,7 +340,6 @@
             this.Controls.Add(this.grpChooseCellType);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FormBoardEditor";

@@ -26,7 +26,7 @@ namespace KReversi
 
         private void FormBotCreator_Load(object sender, EventArgs e)
         {
-
+            this.Icon = Resource1.KReversiIcon;
 
             //Some time IDE has the problem that it will not automatically added 
             //So I need to manually add them

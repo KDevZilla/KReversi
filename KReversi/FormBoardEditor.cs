@@ -37,7 +37,7 @@ namespace KReversi
         public AI.BoardValue boardValueForOpenning = null;
         private void FormTestBoardPictureBox_Load(object sender, EventArgs e)
         {
-
+            this.Icon = Resource1.KReversiIcon;
 
             Utility.UI.MakeFormCaptionToBeDarkMode(this, Global.CurrentTheme.IsFormCaptionDarkMode);
 

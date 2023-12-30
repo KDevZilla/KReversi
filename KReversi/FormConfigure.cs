@@ -51,6 +51,7 @@ namespace KReversi
         public FormGame FormGameCaller = null;
         private void FormConfigure_Load(object sender, EventArgs e)
         {
+            this.Icon = Resource1.KReversiIcon;
             this.lblLogfileLocation.Text = "Log file location (Click to open):" + Environment.NewLine +
                 Utility.FileUtility.LogFilePath;
             this.txtHumanPlayer1Name.Text = Global.CurrentSettings.Player1AsHumanName;

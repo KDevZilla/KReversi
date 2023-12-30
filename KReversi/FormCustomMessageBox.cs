@@ -86,6 +86,7 @@ namespace KReversi
         }
         private void FormCustomMessageBox_Load(object sender, EventArgs e)
         {
+            this.Icon = Resource1.KReversiIcon;
             this.pictureBox1.Image = SystemIcons.Information.ToBitmap();
             this.SetTheme();
            

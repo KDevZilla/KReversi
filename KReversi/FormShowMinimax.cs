@@ -149,6 +149,7 @@ namespace KReversi
         }
         private void FormShowMinimax_Load(object sender, EventArgs e)
         {
+            this.Icon = Resource1.KReversiIcon;
             try
             {
                 Utility.UI.MakeFormCaptionToBeDarkMode(this, Global.CurrentTheme.IsFormCaptionDarkMode);

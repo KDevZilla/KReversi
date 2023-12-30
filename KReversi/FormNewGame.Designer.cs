@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewGame));
             this.panelPicboard = new System.Windows.Forms.Panel();
             this.cboMap = new System.Windows.Forms.ComboBox();
             this.picPlayer1 = new System.Windows.Forms.PictureBox();
@@ -193,7 +192,6 @@
             this.Controls.Add(this.cboMap);
             this.Controls.Add(this.panelPicboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormNewGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

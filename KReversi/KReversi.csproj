@@ -120,6 +120,11 @@
     <Compile Include="Game\GameValue.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="KReversiSettings.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI\MenuCustomColor.cs" />
     <Compile Include="UI\MockIUI.cs" />
     <Compile Include="UI\ReverseUI.cs" />
@@ -189,6 +194,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="AppInfo\Boards\Board01.brd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -226,9 +235,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="AppInfo\AppImages\HumanClip01.png" />
     <Content Include="AppInfo\AppImages\Player1.png" />
@@ -249,6 +256,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="KReversiIcon.ico" />
+    <None Include="KReversiLogo.jpg" />
+    <None Include="Resources\Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,5 +22,10 @@ namespace KReversi
             this.fileToolStripMenuItem.DropDownItems[1].Visible = false;
 
         }
+
+        private void FormTestDynamicMenu_Load(object sender, EventArgs e)
+        {
+            this.Icon = Resource1.KReversiIcon;
+        }
     }
 }

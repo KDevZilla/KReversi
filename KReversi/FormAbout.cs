@@ -31,6 +31,8 @@ namespace KReversi
 
         private void FormAbout_Load(object sender, EventArgs e)
         {
+            this.Icon = Resource1.KReversiIcon;
+
             Utility.UI.MakeFormCaptionToBeDarkMode(this, Global.CurrentTheme.IsFormCaptionDarkMode);
             //Global.SetButtonColor(this.btnClose);
             Utility.ThemeUtility themeUtil = new Utility.ThemeUtility(Global.CurrentTheme);

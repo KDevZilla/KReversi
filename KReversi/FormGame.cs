@@ -47,6 +47,8 @@ namespace KReversi
         private bool HasSetThemeTheFirstTimeYet = false;
         private void FormGame_Load(object sender, EventArgs e)
         {
+            this.Icon = Resource1.KReversiIcon;
+
             //SetTheme();
             this.Hide();
             if (!ChooseGameMode())
