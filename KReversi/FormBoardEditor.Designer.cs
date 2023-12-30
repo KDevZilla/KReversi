@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBoardEditor));
             this.btnBlack = new System.Windows.Forms.Button();
             this.btnWhite = new System.Windows.Forms.Button();
             this.btnBlank = new System.Windows.Forms.Button();
@@ -39,6 +40,14 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemRecently1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecentlyEmpty = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecentlyLine = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeBoardEditorAndPlayFromThisBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClearBoard = new System.Windows.Forms.Button();
@@ -50,14 +59,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.grpNumberDisk = new System.Windows.Forms.GroupBox();
             this.btnSwap = new System.Windows.Forms.Button();
-            this.toolStripMenuItemRecentlyLine = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemRecentlyEmpty = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently6 = new System.Windows.Forms.ToolStripMenuItem();
             this.grpChooseCellType.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.grpNumberDisk.SuspendLayout();
@@ -170,6 +171,53 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(301, 6);
             // 
+            // toolStripMenuItemRecently1
+            // 
+            this.toolStripMenuItemRecently1.Name = "toolStripMenuItemRecently1";
+            this.toolStripMenuItemRecently1.Size = new System.Drawing.Size(304, 22);
+            this.toolStripMenuItemRecently1.Text = "1.";
+            // 
+            // toolStripMenuItemRecently2
+            // 
+            this.toolStripMenuItemRecently2.Name = "toolStripMenuItemRecently2";
+            this.toolStripMenuItemRecently2.Size = new System.Drawing.Size(304, 22);
+            this.toolStripMenuItemRecently2.Text = "2.";
+            // 
+            // toolStripMenuItemRecently3
+            // 
+            this.toolStripMenuItemRecently3.Name = "toolStripMenuItemRecently3";
+            this.toolStripMenuItemRecently3.Size = new System.Drawing.Size(304, 22);
+            this.toolStripMenuItemRecently3.Text = "3.";
+            // 
+            // toolStripMenuItemRecently4
+            // 
+            this.toolStripMenuItemRecently4.Name = "toolStripMenuItemRecently4";
+            this.toolStripMenuItemRecently4.Size = new System.Drawing.Size(304, 22);
+            this.toolStripMenuItemRecently4.Text = "4.";
+            // 
+            // toolStripMenuItemRecently5
+            // 
+            this.toolStripMenuItemRecently5.Name = "toolStripMenuItemRecently5";
+            this.toolStripMenuItemRecently5.Size = new System.Drawing.Size(304, 22);
+            this.toolStripMenuItemRecently5.Text = "5.";
+            // 
+            // toolStripMenuItemRecently6
+            // 
+            this.toolStripMenuItemRecently6.Name = "toolStripMenuItemRecently6";
+            this.toolStripMenuItemRecently6.Size = new System.Drawing.Size(304, 22);
+            this.toolStripMenuItemRecently6.Text = "6.";
+            // 
+            // toolStripMenuItemRecentlyEmpty
+            // 
+            this.toolStripMenuItemRecentlyEmpty.Name = "toolStripMenuItemRecentlyEmpty";
+            this.toolStripMenuItemRecentlyEmpty.Size = new System.Drawing.Size(304, 22);
+            this.toolStripMenuItemRecentlyEmpty.Text = "Empty Board Recently Files";
+            // 
+            // toolStripMenuItemRecentlyLine
+            // 
+            this.toolStripMenuItemRecentlyLine.Name = "toolStripMenuItemRecentlyLine";
+            this.toolStripMenuItemRecentlyLine.Size = new System.Drawing.Size(301, 6);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -280,53 +328,6 @@
             this.btnSwap.UseVisualStyleBackColor = true;
             this.btnSwap.Click += new System.EventHandler(this.button2_Click);
             // 
-            // toolStripMenuItemRecentlyLine
-            // 
-            this.toolStripMenuItemRecentlyLine.Name = "toolStripMenuItemRecentlyLine";
-            this.toolStripMenuItemRecentlyLine.Size = new System.Drawing.Size(301, 6);
-            // 
-            // toolStripMenuItemRecentlyEmpty
-            // 
-            this.toolStripMenuItemRecentlyEmpty.Name = "toolStripMenuItemRecentlyEmpty";
-            this.toolStripMenuItemRecentlyEmpty.Size = new System.Drawing.Size(304, 22);
-            this.toolStripMenuItemRecentlyEmpty.Text = "Empty Board Recently Files";
-            // 
-            // toolStripMenuItemRecently1
-            // 
-            this.toolStripMenuItemRecently1.Name = "toolStripMenuItemRecently1";
-            this.toolStripMenuItemRecently1.Size = new System.Drawing.Size(304, 22);
-            this.toolStripMenuItemRecently1.Text = "1.";
-            // 
-            // toolStripMenuItemRecently2
-            // 
-            this.toolStripMenuItemRecently2.Name = "toolStripMenuItemRecently2";
-            this.toolStripMenuItemRecently2.Size = new System.Drawing.Size(304, 22);
-            this.toolStripMenuItemRecently2.Text = "2.";
-            // 
-            // toolStripMenuItemRecently3
-            // 
-            this.toolStripMenuItemRecently3.Name = "toolStripMenuItemRecently3";
-            this.toolStripMenuItemRecently3.Size = new System.Drawing.Size(304, 22);
-            this.toolStripMenuItemRecently3.Text = "3.";
-            // 
-            // toolStripMenuItemRecently4
-            // 
-            this.toolStripMenuItemRecently4.Name = "toolStripMenuItemRecently4";
-            this.toolStripMenuItemRecently4.Size = new System.Drawing.Size(304, 22);
-            this.toolStripMenuItemRecently4.Text = "4.";
-            // 
-            // toolStripMenuItemRecently5
-            // 
-            this.toolStripMenuItemRecently5.Name = "toolStripMenuItemRecently5";
-            this.toolStripMenuItemRecently5.Size = new System.Drawing.Size(304, 22);
-            this.toolStripMenuItemRecently5.Text = "5.";
-            // 
-            // toolStripMenuItemRecently6
-            // 
-            this.toolStripMenuItemRecently6.Name = "toolStripMenuItemRecently6";
-            this.toolStripMenuItemRecently6.Size = new System.Drawing.Size(304, 22);
-            this.toolStripMenuItemRecently6.Text = "6.";
-            // 
             // FormBoardEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +341,7 @@
             this.Controls.Add(this.grpChooseCellType);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FormBoardEditor";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -52,6 +53,14 @@
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveGameAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemRecently1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecentlyEmpty = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecentlyLine = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,14 +76,6 @@
             this.panelInfo = new System.Windows.Forms.Panel();
             this.picPlayer2 = new System.Windows.Forms.PictureBox();
             this.picPlayer1 = new System.Windows.Forms.PictureBox();
-            this.toolStripMenuItemRecentlyLine = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemRecently6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecentlyEmpty = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelNavigator.SuspendLayout();
@@ -96,7 +97,6 @@
             this.btnNext.Text = "→ ";
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnNext.UseVisualStyleBackColor = false;
-          //  this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrevious
             // 
@@ -110,7 +110,6 @@
             this.btnPrevious.Text = "←";
             this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPrevious.UseVisualStyleBackColor = false;
-           // this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // tabControl1
             // 
@@ -380,6 +379,53 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
             // 
+            // toolStripMenuItemRecently1
+            // 
+            this.toolStripMenuItemRecently1.Name = "toolStripMenuItemRecently1";
+            this.toolStripMenuItemRecently1.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItemRecently1.Text = "1.";
+            // 
+            // toolStripMenuItemRecently2
+            // 
+            this.toolStripMenuItemRecently2.Name = "toolStripMenuItemRecently2";
+            this.toolStripMenuItemRecently2.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItemRecently2.Text = "2.";
+            // 
+            // toolStripMenuItemRecently3
+            // 
+            this.toolStripMenuItemRecently3.Name = "toolStripMenuItemRecently3";
+            this.toolStripMenuItemRecently3.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItemRecently3.Text = "3.";
+            // 
+            // toolStripMenuItemRecently4
+            // 
+            this.toolStripMenuItemRecently4.Name = "toolStripMenuItemRecently4";
+            this.toolStripMenuItemRecently4.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItemRecently4.Text = "4.";
+            // 
+            // toolStripMenuItemRecently5
+            // 
+            this.toolStripMenuItemRecently5.Name = "toolStripMenuItemRecently5";
+            this.toolStripMenuItemRecently5.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItemRecently5.Text = "5.";
+            // 
+            // toolStripMenuItemRecently6
+            // 
+            this.toolStripMenuItemRecently6.Name = "toolStripMenuItemRecently6";
+            this.toolStripMenuItemRecently6.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItemRecently6.Text = "6.";
+            // 
+            // toolStripMenuItemRecentlyEmpty
+            // 
+            this.toolStripMenuItemRecentlyEmpty.Name = "toolStripMenuItemRecentlyEmpty";
+            this.toolStripMenuItemRecentlyEmpty.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItemRecentlyEmpty.Text = "Empty Recently Game Files";
+            // 
+            // toolStripMenuItemRecentlyLine
+            // 
+            this.toolStripMenuItemRecentlyLine.Name = "toolStripMenuItemRecentlyLine";
+            this.toolStripMenuItemRecentlyLine.Size = new System.Drawing.Size(213, 6);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -513,53 +559,6 @@
             this.picPlayer1.TabIndex = 5;
             this.picPlayer1.TabStop = false;
             // 
-            // toolStripMenuItemRecentlyLine
-            // 
-            this.toolStripMenuItemRecentlyLine.Name = "toolStripMenuItemRecentlyLine";
-            this.toolStripMenuItemRecentlyLine.Size = new System.Drawing.Size(213, 6);
-            // 
-            // toolStripMenuItemRecently6
-            // 
-            this.toolStripMenuItemRecently6.Name = "toolStripMenuItemRecently6";
-            this.toolStripMenuItemRecently6.Size = new System.Drawing.Size(216, 22);
-            this.toolStripMenuItemRecently6.Text = "6.";
-            // 
-            // toolStripMenuItemRecently1
-            // 
-            this.toolStripMenuItemRecently1.Name = "toolStripMenuItemRecently1";
-            this.toolStripMenuItemRecently1.Size = new System.Drawing.Size(216, 22);
-            this.toolStripMenuItemRecently1.Text = "1.";
-            // 
-            // toolStripMenuItemRecently2
-            // 
-            this.toolStripMenuItemRecently2.Name = "toolStripMenuItemRecently2";
-            this.toolStripMenuItemRecently2.Size = new System.Drawing.Size(216, 22);
-            this.toolStripMenuItemRecently2.Text = "2.";
-            // 
-            // toolStripMenuItemRecently3
-            // 
-            this.toolStripMenuItemRecently3.Name = "toolStripMenuItemRecently3";
-            this.toolStripMenuItemRecently3.Size = new System.Drawing.Size(216, 22);
-            this.toolStripMenuItemRecently3.Text = "3.";
-            // 
-            // toolStripMenuItemRecently4
-            // 
-            this.toolStripMenuItemRecently4.Name = "toolStripMenuItemRecently4";
-            this.toolStripMenuItemRecently4.Size = new System.Drawing.Size(216, 22);
-            this.toolStripMenuItemRecently4.Text = "4.";
-            // 
-            // toolStripMenuItemRecently5
-            // 
-            this.toolStripMenuItemRecently5.Name = "toolStripMenuItemRecently5";
-            this.toolStripMenuItemRecently5.Size = new System.Drawing.Size(216, 22);
-            this.toolStripMenuItemRecently5.Text = "5.";
-            // 
-            // toolStripMenuItemRecentlyEmpty
-            // 
-            this.toolStripMenuItemRecentlyEmpty.Name = "toolStripMenuItemRecentlyEmpty";
-            this.toolStripMenuItemRecentlyEmpty.Size = new System.Drawing.Size(216, 22);
-            this.toolStripMenuItemRecentlyEmpty.Text = "Empty Recently Game Files";
-            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,6 +569,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FormGame";

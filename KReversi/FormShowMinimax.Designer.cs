@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormShowMinimax));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.chkUserReversiNotation = new System.Windows.Forms.CheckBox();
             this.btnClose = new System.Windows.Forms.Button();
@@ -77,6 +78,7 @@
             this.Controls.Add(this.chkUserReversiNotation);
             this.Controls.Add(this.treeView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormShowMinimax";
             this.Text = "FormShowMinimax";

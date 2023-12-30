@@ -88,6 +88,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.linkLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAbout";
             this.Text = "About";

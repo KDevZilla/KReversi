@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTestDynamicMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.recently01ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recently02ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recentyl03ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,25 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(128, 6);
+            // 
+            // recently01ToolStripMenuItem
+            // 
+            this.recently01ToolStripMenuItem.Name = "recently01ToolStripMenuItem";
+            this.recently01ToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.recently01ToolStripMenuItem.Text = "Recently01";
+            // 
+            // recently02ToolStripMenuItem
+            // 
+            this.recently02ToolStripMenuItem.Name = "recently02ToolStripMenuItem";
+            this.recently02ToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.recently02ToolStripMenuItem.Text = "Recently02";
+            // 
+            // recentyl03ToolStripMenuItem
+            // 
+            this.recentyl03ToolStripMenuItem.Name = "recentyl03ToolStripMenuItem";
+            this.recentyl03ToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.recentyl03ToolStripMenuItem.Text = "Recentyl03";
             // 
             // button1
             // 
@@ -83,24 +102,6 @@
             this.textBox1.Size = new System.Drawing.Size(389, 389);
             this.textBox1.TabIndex = 2;
             // 
-            // recently01ToolStripMenuItem
-            // 
-            this.recently01ToolStripMenuItem.Name = "recently01ToolStripMenuItem";
-            this.recently01ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.recently01ToolStripMenuItem.Text = "Recently01";
-            // 
-            // recently02ToolStripMenuItem
-            // 
-            this.recently02ToolStripMenuItem.Name = "recently02ToolStripMenuItem";
-            this.recently02ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.recently02ToolStripMenuItem.Text = "Recently02";
-            // 
-            // recentyl03ToolStripMenuItem
-            // 
-            this.recentyl03ToolStripMenuItem.Name = "recentyl03ToolStripMenuItem";
-            this.recentyl03ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.recentyl03ToolStripMenuItem.Text = "Recentyl03";
-            // 
             // FormTestDynamicMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +110,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormTestDynamicMenu";
             this.Text = "FormTestDynamicMenu";

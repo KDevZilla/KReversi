@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBotCreator));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -43,6 +44,14 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemRecentlyLine = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemRecently1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecently6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRecentlyEmpty = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblTimeLimit = new System.Windows.Forms.Label();
             this.numTimeLimitPerMove = new System.Windows.Forms.NumericUpDown();
@@ -54,14 +63,6 @@
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chkPositionScore = new System.Windows.Forms.CheckBox();
             this.lblWarning = new System.Windows.Forms.Label();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemRecently1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecently6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemRecentlyEmpty = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTimeLimitPerMove)).BeginInit();
@@ -212,6 +213,53 @@
             // 
             this.toolStripMenuItemRecentlyLine.Name = "toolStripMenuItemRecentlyLine";
             this.toolStripMenuItemRecentlyLine.Size = new System.Drawing.Size(200, 6);
+            // 
+            // toolStripMenuItemRecently1
+            // 
+            this.toolStripMenuItemRecently1.Name = "toolStripMenuItemRecently1";
+            this.toolStripMenuItemRecently1.Size = new System.Drawing.Size(203, 22);
+            this.toolStripMenuItemRecently1.Text = "1.";
+            // 
+            // toolStripMenuItemRecently2
+            // 
+            this.toolStripMenuItemRecently2.Name = "toolStripMenuItemRecently2";
+            this.toolStripMenuItemRecently2.Size = new System.Drawing.Size(203, 22);
+            this.toolStripMenuItemRecently2.Text = "2.";
+            // 
+            // toolStripMenuItemRecently3
+            // 
+            this.toolStripMenuItemRecently3.Name = "toolStripMenuItemRecently3";
+            this.toolStripMenuItemRecently3.Size = new System.Drawing.Size(203, 22);
+            this.toolStripMenuItemRecently3.Text = "3.";
+            // 
+            // toolStripMenuItemRecently4
+            // 
+            this.toolStripMenuItemRecently4.Name = "toolStripMenuItemRecently4";
+            this.toolStripMenuItemRecently4.Size = new System.Drawing.Size(203, 22);
+            this.toolStripMenuItemRecently4.Text = "4.";
+            // 
+            // toolStripMenuItemRecently5
+            // 
+            this.toolStripMenuItemRecently5.Name = "toolStripMenuItemRecently5";
+            this.toolStripMenuItemRecently5.Size = new System.Drawing.Size(203, 22);
+            this.toolStripMenuItemRecently5.Text = "5.";
+            // 
+            // toolStripMenuItemRecently6
+            // 
+            this.toolStripMenuItemRecently6.Name = "toolStripMenuItemRecently6";
+            this.toolStripMenuItemRecently6.Size = new System.Drawing.Size(203, 22);
+            this.toolStripMenuItemRecently6.Text = "6.";
+            // 
+            // toolStripMenuItemRecentlyEmpty
+            // 
+            this.toolStripMenuItemRecentlyEmpty.Name = "toolStripMenuItemRecentlyEmpty";
+            this.toolStripMenuItemRecentlyEmpty.Size = new System.Drawing.Size(203, 22);
+            this.toolStripMenuItemRecentlyEmpty.Text = "Empty Bot Recently Files";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(200, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -376,53 +424,6 @@
             this.lblWarning.TabIndex = 16;
             this.lblWarning.Text = "*The change in this form will be affected after you create a new game.";
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(200, 6);
-            // 
-            // toolStripMenuItemRecently1
-            // 
-            this.toolStripMenuItemRecently1.Name = "toolStripMenuItemRecently1";
-            this.toolStripMenuItemRecently1.Size = new System.Drawing.Size(203, 22);
-            this.toolStripMenuItemRecently1.Text = "1.";
-            // 
-            // toolStripMenuItemRecently2
-            // 
-            this.toolStripMenuItemRecently2.Name = "toolStripMenuItemRecently2";
-            this.toolStripMenuItemRecently2.Size = new System.Drawing.Size(203, 22);
-            this.toolStripMenuItemRecently2.Text = "2.";
-            // 
-            // toolStripMenuItemRecently3
-            // 
-            this.toolStripMenuItemRecently3.Name = "toolStripMenuItemRecently3";
-            this.toolStripMenuItemRecently3.Size = new System.Drawing.Size(203, 22);
-            this.toolStripMenuItemRecently3.Text = "3.";
-            // 
-            // toolStripMenuItemRecently4
-            // 
-            this.toolStripMenuItemRecently4.Name = "toolStripMenuItemRecently4";
-            this.toolStripMenuItemRecently4.Size = new System.Drawing.Size(203, 22);
-            this.toolStripMenuItemRecently4.Text = "4.";
-            // 
-            // toolStripMenuItemRecently5
-            // 
-            this.toolStripMenuItemRecently5.Name = "toolStripMenuItemRecently5";
-            this.toolStripMenuItemRecently5.Size = new System.Drawing.Size(203, 22);
-            this.toolStripMenuItemRecently5.Text = "5.";
-            // 
-            // toolStripMenuItemRecently6
-            // 
-            this.toolStripMenuItemRecently6.Name = "toolStripMenuItemRecently6";
-            this.toolStripMenuItemRecently6.Size = new System.Drawing.Size(203, 22);
-            this.toolStripMenuItemRecently6.Text = "6.";
-            // 
-            // toolStripMenuItemRecentlyEmpty
-            // 
-            this.toolStripMenuItemRecentlyEmpty.Name = "toolStripMenuItemRecentlyEmpty";
-            this.toolStripMenuItemRecentlyEmpty.Size = new System.Drawing.Size(203, 22);
-            this.toolStripMenuItemRecentlyEmpty.Text = "Empty Bot Recently Files";
-            // 
             // FormBotCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,6 +443,7 @@
             this.Controls.Add(this.pictureboxBotPhoto);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FormBotCreator";

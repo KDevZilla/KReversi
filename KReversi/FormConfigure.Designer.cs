@@ -32,39 +32,39 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.tabPageOthers = new System.Windows.Forms.TabPage();
-            this.chkDarkMode = new System.Windows.Forms.CheckBox();
-            this.chkCompactMode = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkWriteDebugLog = new System.Windows.Forms.CheckBox();
-            this.lblWarning = new System.Windows.Forms.Label();
-            this.chkWriteDebugLogL2 = new System.Windows.Forms.CheckBox();
-            this.chkWriteLog = new System.Windows.Forms.CheckBox();
             this.lblLogfileLocation = new System.Windows.Forms.Label();
+            this.chkWriteLog = new System.Windows.Forms.CheckBox();
+            this.chkWriteDebugLogL2 = new System.Windows.Forms.CheckBox();
+            this.lblWarning = new System.Windows.Forms.Label();
+            this.chkWriteDebugLog = new System.Windows.Forms.CheckBox();
+            this.chkCompactMode = new System.Windows.Forms.CheckBox();
+            this.chkDarkMode = new System.Windows.Forms.CheckBox();
             this.tabPageAI = new System.Windows.Forms.TabPage();
-            this.chkAllowRandomDecision = new System.Windows.Forms.CheckBox();
-            this.lblRandomDecision = new System.Windows.Forms.Label();
-            this.chkKeepLatestDecision = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.chkUseAlphaBetaPruning = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.chkUseAlphaBetaPruning = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chkKeepLatestDecision = new System.Windows.Forms.CheckBox();
+            this.lblRandomDecision = new System.Windows.Forms.Label();
+            this.chkAllowRandomDecision = new System.Windows.Forms.CheckBox();
             this.tabPageHumanPlayer1 = new System.Windows.Forms.TabPage();
-            this.pictureboxBotPhoto1 = new System.Windows.Forms.PictureBox();
-            this.btnChoosePhoto1 = new System.Windows.Forms.Button();
-            this.lblName1 = new System.Windows.Forms.Label();
-            this.pictureboxBotPhoto2 = new System.Windows.Forms.PictureBox();
-            this.txtHumanPlayer1Name = new System.Windows.Forms.TextBox();
-            this.txtHumanPlayer2Name = new System.Windows.Forms.TextBox();
-            this.lblName2 = new System.Windows.Forms.Label();
             this.btnChoosePhoto2 = new System.Windows.Forms.Button();
+            this.lblName2 = new System.Windows.Forms.Label();
+            this.txtHumanPlayer2Name = new System.Windows.Forms.TextBox();
+            this.txtHumanPlayer1Name = new System.Windows.Forms.TextBox();
+            this.pictureboxBotPhoto2 = new System.Windows.Forms.PictureBox();
+            this.lblName1 = new System.Windows.Forms.Label();
+            this.btnChoosePhoto1 = new System.Windows.Forms.Button();
+            this.pictureboxBotPhoto1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageOthers.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPageAI.SuspendLayout();
             this.tabPageHumanPlayer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureboxBotPhoto1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxBotPhoto2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxBotPhoto1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,28 +100,6 @@
             this.tabPageOthers.Text = "Others";
             this.tabPageOthers.UseVisualStyleBackColor = true;
             // 
-            // chkDarkMode
-            // 
-            this.chkDarkMode.AutoSize = true;
-            this.chkDarkMode.Location = new System.Drawing.Point(64, 37);
-            this.chkDarkMode.Name = "chkDarkMode";
-            this.chkDarkMode.Size = new System.Drawing.Size(124, 29);
-            this.chkDarkMode.TabIndex = 2;
-            this.chkDarkMode.Text = "Dark Mode";
-            this.chkDarkMode.UseVisualStyleBackColor = true;
-            this.chkDarkMode.CheckedChanged += new System.EventHandler(this.chkDarkMode_CheckedChanged);
-            // 
-            // chkCompactMode
-            // 
-            this.chkCompactMode.AutoSize = true;
-            this.chkCompactMode.Location = new System.Drawing.Point(64, 72);
-            this.chkCompactMode.Name = "chkCompactMode";
-            this.chkCompactMode.Size = new System.Drawing.Size(160, 29);
-            this.chkCompactMode.TabIndex = 3;
-            this.chkCompactMode.Text = "Compact Mode";
-            this.chkCompactMode.UseVisualStyleBackColor = true;
-            this.chkCompactMode.CheckedChanged += new System.EventHandler(this.chkCompactMode_CheckedChanged);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblLogfileLocation);
@@ -136,15 +114,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Log";
             // 
-            // chkWriteDebugLog
+            // lblLogfileLocation
             // 
-            this.chkWriteDebugLog.AutoSize = true;
-            this.chkWriteDebugLog.Location = new System.Drawing.Point(19, 67);
-            this.chkWriteDebugLog.Name = "chkWriteDebugLog";
-            this.chkWriteDebugLog.Size = new System.Drawing.Size(182, 29);
-            this.chkWriteDebugLog.TabIndex = 4;
-            this.chkWriteDebugLog.Text = "Write Debug Log*";
-            this.chkWriteDebugLog.UseVisualStyleBackColor = true;
+            this.lblLogfileLocation.AutoSize = true;
+            this.lblLogfileLocation.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblLogfileLocation.Location = new System.Drawing.Point(17, 311);
+            this.lblLogfileLocation.Name = "lblLogfileLocation";
+            this.lblLogfileLocation.Size = new System.Drawing.Size(151, 25);
+            this.lblLogfileLocation.TabIndex = 13;
+            this.lblLogfileLocation.Text = "Log file location:";
+            this.lblLogfileLocation.Click += new System.EventHandler(this.lblLogfileLocation_Click);
+            // 
+            // chkWriteLog
+            // 
+            this.chkWriteLog.AutoSize = true;
+            this.chkWriteLog.Location = new System.Drawing.Point(19, 32);
+            this.chkWriteLog.Name = "chkWriteLog";
+            this.chkWriteLog.Size = new System.Drawing.Size(118, 29);
+            this.chkWriteLog.TabIndex = 0;
+            this.chkWriteLog.Text = "Write Log ";
+            this.chkWriteLog.UseVisualStyleBackColor = true;
+            // 
+            // chkWriteDebugLogL2
+            // 
+            this.chkWriteDebugLogL2.AutoSize = true;
+            this.chkWriteDebugLogL2.Location = new System.Drawing.Point(19, 102);
+            this.chkWriteDebugLogL2.Name = "chkWriteDebugLogL2";
+            this.chkWriteDebugLogL2.Size = new System.Drawing.Size(240, 29);
+            this.chkWriteDebugLogL2.TabIndex = 5;
+            this.chkWriteDebugLogL2.Text = "Write Debug Log Level2*";
+            this.chkWriteDebugLogL2.UseVisualStyleBackColor = true;
             // 
             // lblWarning
             // 
@@ -157,36 +156,37 @@
     "e ultra slow and \r\nthe log file might be very big, \r\nplease choose this option i" +
     "n case you need to debug it.\r\n";
             // 
-            // chkWriteDebugLogL2
+            // chkWriteDebugLog
             // 
-            this.chkWriteDebugLogL2.AutoSize = true;
-            this.chkWriteDebugLogL2.Location = new System.Drawing.Point(19, 102);
-            this.chkWriteDebugLogL2.Name = "chkWriteDebugLogL2";
-            this.chkWriteDebugLogL2.Size = new System.Drawing.Size(240, 29);
-            this.chkWriteDebugLogL2.TabIndex = 5;
-            this.chkWriteDebugLogL2.Text = "Write Debug Log Level2*";
-            this.chkWriteDebugLogL2.UseVisualStyleBackColor = true;
+            this.chkWriteDebugLog.AutoSize = true;
+            this.chkWriteDebugLog.Location = new System.Drawing.Point(19, 67);
+            this.chkWriteDebugLog.Name = "chkWriteDebugLog";
+            this.chkWriteDebugLog.Size = new System.Drawing.Size(182, 29);
+            this.chkWriteDebugLog.TabIndex = 4;
+            this.chkWriteDebugLog.Text = "Write Debug Log*";
+            this.chkWriteDebugLog.UseVisualStyleBackColor = true;
             // 
-            // chkWriteLog
+            // chkCompactMode
             // 
-            this.chkWriteLog.AutoSize = true;
-            this.chkWriteLog.Location = new System.Drawing.Point(19, 32);
-            this.chkWriteLog.Name = "chkWriteLog";
-            this.chkWriteLog.Size = new System.Drawing.Size(118, 29);
-            this.chkWriteLog.TabIndex = 0;
-            this.chkWriteLog.Text = "Write Log ";
-            this.chkWriteLog.UseVisualStyleBackColor = true;
+            this.chkCompactMode.AutoSize = true;
+            this.chkCompactMode.Location = new System.Drawing.Point(64, 72);
+            this.chkCompactMode.Name = "chkCompactMode";
+            this.chkCompactMode.Size = new System.Drawing.Size(160, 29);
+            this.chkCompactMode.TabIndex = 3;
+            this.chkCompactMode.Text = "Compact Mode";
+            this.chkCompactMode.UseVisualStyleBackColor = true;
+            this.chkCompactMode.CheckedChanged += new System.EventHandler(this.chkCompactMode_CheckedChanged);
             // 
-            // lblLogfileLocation
+            // chkDarkMode
             // 
-            this.lblLogfileLocation.AutoSize = true;
-            this.lblLogfileLocation.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblLogfileLocation.Location = new System.Drawing.Point(17, 311);
-            this.lblLogfileLocation.Name = "lblLogfileLocation";
-            this.lblLogfileLocation.Size = new System.Drawing.Size(151, 25);
-            this.lblLogfileLocation.TabIndex = 13;
-            this.lblLogfileLocation.Text = "Log file location:";
-            this.lblLogfileLocation.Click += new System.EventHandler(this.lblLogfileLocation_Click);
+            this.chkDarkMode.AutoSize = true;
+            this.chkDarkMode.Location = new System.Drawing.Point(64, 37);
+            this.chkDarkMode.Name = "chkDarkMode";
+            this.chkDarkMode.Size = new System.Drawing.Size(124, 29);
+            this.chkDarkMode.TabIndex = 2;
+            this.chkDarkMode.Text = "Dark Mode";
+            this.chkDarkMode.UseVisualStyleBackColor = true;
+            this.chkDarkMode.CheckedChanged += new System.EventHandler(this.chkDarkMode_CheckedChanged);
             // 
             // tabPageAI
             // 
@@ -206,52 +206,35 @@
             this.tabPageAI.Text = "AI";
             this.tabPageAI.UseVisualStyleBackColor = true;
             // 
-            // chkAllowRandomDecision
+            // label4
             // 
-            this.chkAllowRandomDecision.AutoSize = true;
-            this.chkAllowRandomDecision.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.chkAllowRandomDecision.Location = new System.Drawing.Point(43, 46);
-            this.chkAllowRandomDecision.Margin = new System.Windows.Forms.Padding(2);
-            this.chkAllowRandomDecision.Name = "chkAllowRandomDecision";
-            this.chkAllowRandomDecision.Size = new System.Drawing.Size(233, 29);
-            this.chkAllowRandomDecision.TabIndex = 11;
-            this.chkAllowRandomDecision.Text = "Allow Random decision ";
-            this.chkAllowRandomDecision.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.chkAllowRandomDecision.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label4.Location = new System.Drawing.Point(62, 466);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(576, 75);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "You should always user Alpha Beta Pruning for better performance.\r\nThe only time " +
+    "you disable this feature is the time you would like \r\nto learn Minimax without A" +
+    "lpha Beta Pruning works.";
             // 
-            // lblRandomDecision
+            // label3
             // 
-            this.lblRandomDecision.AutoSize = true;
-            this.lblRandomDecision.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblRandomDecision.Location = new System.Drawing.Point(62, 77);
-            this.lblRandomDecision.Name = "lblRandomDecision";
-            this.lblRandomDecision.Size = new System.Drawing.Size(425, 100);
-            this.lblRandomDecision.TabIndex = 12;
-            this.lblRandomDecision.Text = "If the node value is the same for the first 14 disks.\r\n(This option exists to pre" +
-    "vent the situation that\r\nBot vs Bot play exactly the same\r\neverytime)";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label3.Location = new System.Drawing.Point(340, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 25);
+            this.label3.TabIndex = 17;
             // 
-            // chkKeepLatestDecision
+            // label2
             // 
-            this.chkKeepLatestDecision.AutoSize = true;
-            this.chkKeepLatestDecision.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.chkKeepLatestDecision.Location = new System.Drawing.Point(43, 219);
-            this.chkKeepLatestDecision.Margin = new System.Windows.Forms.Padding(2);
-            this.chkKeepLatestDecision.Name = "chkKeepLatestDecision";
-            this.chkKeepLatestDecision.Size = new System.Drawing.Size(503, 29);
-            this.chkKeepLatestDecision.TabIndex = 13;
-            this.chkKeepLatestDecision.Text = "Keep the lastest decision tree to show on Show Minimax";
-            this.chkKeepLatestDecision.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.chkKeepLatestDecision.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label1.Location = new System.Drawing.Point(62, 250);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(496, 150);
-            this.label1.TabIndex = 14;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label2.Location = new System.Drawing.Point(332, 266);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 25);
+            this.label2.TabIndex = 16;
             // 
             // chkUseAlphaBetaPruning
             // 
@@ -266,35 +249,52 @@
             this.chkUseAlphaBetaPruning.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.chkUseAlphaBetaPruning.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label2.Location = new System.Drawing.Point(332, 266);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
-            this.label2.TabIndex = 16;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label1.Location = new System.Drawing.Point(62, 250);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(496, 150);
+            this.label1.TabIndex = 14;
+            this.label1.Text = resources.GetString("label1.Text");
             // 
-            // label3
+            // chkKeepLatestDecision
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label3.Location = new System.Drawing.Point(340, 274);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 25);
-            this.label3.TabIndex = 17;
+            this.chkKeepLatestDecision.AutoSize = true;
+            this.chkKeepLatestDecision.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.chkKeepLatestDecision.Location = new System.Drawing.Point(43, 219);
+            this.chkKeepLatestDecision.Margin = new System.Windows.Forms.Padding(2);
+            this.chkKeepLatestDecision.Name = "chkKeepLatestDecision";
+            this.chkKeepLatestDecision.Size = new System.Drawing.Size(503, 29);
+            this.chkKeepLatestDecision.TabIndex = 13;
+            this.chkKeepLatestDecision.Text = "Keep the lastest decision tree to show on Show Minimax";
+            this.chkKeepLatestDecision.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.chkKeepLatestDecision.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lblRandomDecision
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label4.Location = new System.Drawing.Point(62, 466);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(576, 75);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "You should always user Alpha Beta Pruning for better performance.\r\nThe only time " +
-    "you disable this feature is the time you would like \r\nto learn Minimax without A" +
-    "lpha Beta Pruning works.";
+            this.lblRandomDecision.AutoSize = true;
+            this.lblRandomDecision.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblRandomDecision.Location = new System.Drawing.Point(62, 77);
+            this.lblRandomDecision.Name = "lblRandomDecision";
+            this.lblRandomDecision.Size = new System.Drawing.Size(425, 100);
+            this.lblRandomDecision.TabIndex = 12;
+            this.lblRandomDecision.Text = "If the node value is the same for the first 14 disks.\r\n(This option exists to pre" +
+    "vent the situation that\r\nBot vs Bot play exactly the same\r\neverytime)";
+            // 
+            // chkAllowRandomDecision
+            // 
+            this.chkAllowRandomDecision.AutoSize = true;
+            this.chkAllowRandomDecision.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.chkAllowRandomDecision.Location = new System.Drawing.Point(43, 46);
+            this.chkAllowRandomDecision.Margin = new System.Windows.Forms.Padding(2);
+            this.chkAllowRandomDecision.Name = "chkAllowRandomDecision";
+            this.chkAllowRandomDecision.Size = new System.Drawing.Size(233, 29);
+            this.chkAllowRandomDecision.TabIndex = 11;
+            this.chkAllowRandomDecision.Text = "Allow Random decision ";
+            this.chkAllowRandomDecision.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.chkAllowRandomDecision.UseVisualStyleBackColor = true;
             // 
             // tabPageHumanPlayer1
             // 
@@ -314,14 +314,57 @@
             this.tabPageHumanPlayer1.Text = "Human Player ";
             this.tabPageHumanPlayer1.UseVisualStyleBackColor = true;
             // 
-            // pictureboxBotPhoto1
+            // btnChoosePhoto2
             // 
-            this.pictureboxBotPhoto1.Location = new System.Drawing.Point(417, 61);
-            this.pictureboxBotPhoto1.Name = "pictureboxBotPhoto1";
-            this.pictureboxBotPhoto1.Size = new System.Drawing.Size(86, 90);
-            this.pictureboxBotPhoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureboxBotPhoto1.TabIndex = 5;
-            this.pictureboxBotPhoto1.TabStop = false;
+            this.btnChoosePhoto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoosePhoto2.Location = new System.Drawing.Point(380, 442);
+            this.btnChoosePhoto2.Name = "btnChoosePhoto2";
+            this.btnChoosePhoto2.Size = new System.Drawing.Size(123, 40);
+            this.btnChoosePhoto2.TabIndex = 12;
+            this.btnChoosePhoto2.Text = "Choose Photo";
+            this.btnChoosePhoto2.UseVisualStyleBackColor = true;
+            this.btnChoosePhoto2.Click += new System.EventHandler(this.btnChoosePhoto2_Click);
+            // 
+            // lblName2
+            // 
+            this.lblName2.AutoSize = true;
+            this.lblName2.Location = new System.Drawing.Point(12, 305);
+            this.lblName2.Name = "lblName2";
+            this.lblName2.Size = new System.Drawing.Size(138, 25);
+            this.lblName2.TabIndex = 9;
+            this.lblName2.Text = "Player 2 Name:";
+            // 
+            // txtHumanPlayer2Name
+            // 
+            this.txtHumanPlayer2Name.Location = new System.Drawing.Point(151, 305);
+            this.txtHumanPlayer2Name.Name = "txtHumanPlayer2Name";
+            this.txtHumanPlayer2Name.Size = new System.Drawing.Size(352, 33);
+            this.txtHumanPlayer2Name.TabIndex = 10;
+            // 
+            // txtHumanPlayer1Name
+            // 
+            this.txtHumanPlayer1Name.Location = new System.Drawing.Point(151, 22);
+            this.txtHumanPlayer1Name.Name = "txtHumanPlayer1Name";
+            this.txtHumanPlayer1Name.Size = new System.Drawing.Size(352, 33);
+            this.txtHumanPlayer1Name.TabIndex = 2;
+            // 
+            // pictureboxBotPhoto2
+            // 
+            this.pictureboxBotPhoto2.Location = new System.Drawing.Point(417, 346);
+            this.pictureboxBotPhoto2.Name = "pictureboxBotPhoto2";
+            this.pictureboxBotPhoto2.Size = new System.Drawing.Size(86, 90);
+            this.pictureboxBotPhoto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureboxBotPhoto2.TabIndex = 11;
+            this.pictureboxBotPhoto2.TabStop = false;
+            // 
+            // lblName1
+            // 
+            this.lblName1.AutoSize = true;
+            this.lblName1.Location = new System.Drawing.Point(12, 22);
+            this.lblName1.Name = "lblName1";
+            this.lblName1.Size = new System.Drawing.Size(138, 25);
+            this.lblName1.TabIndex = 0;
+            this.lblName1.Text = "Player 1 Name:";
             // 
             // btnChoosePhoto1
             // 
@@ -334,57 +377,14 @@
             this.btnChoosePhoto1.UseVisualStyleBackColor = true;
             this.btnChoosePhoto1.Click += new System.EventHandler(this.btnChoosePhoto1_Click);
             // 
-            // lblName1
+            // pictureboxBotPhoto1
             // 
-            this.lblName1.AutoSize = true;
-            this.lblName1.Location = new System.Drawing.Point(12, 22);
-            this.lblName1.Name = "lblName1";
-            this.lblName1.Size = new System.Drawing.Size(138, 25);
-            this.lblName1.TabIndex = 0;
-            this.lblName1.Text = "Player 1 Name:";
-            // 
-            // pictureboxBotPhoto2
-            // 
-            this.pictureboxBotPhoto2.Location = new System.Drawing.Point(417, 346);
-            this.pictureboxBotPhoto2.Name = "pictureboxBotPhoto2";
-            this.pictureboxBotPhoto2.Size = new System.Drawing.Size(86, 90);
-            this.pictureboxBotPhoto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureboxBotPhoto2.TabIndex = 11;
-            this.pictureboxBotPhoto2.TabStop = false;
-            // 
-            // txtHumanPlayer1Name
-            // 
-            this.txtHumanPlayer1Name.Location = new System.Drawing.Point(151, 22);
-            this.txtHumanPlayer1Name.Name = "txtHumanPlayer1Name";
-            this.txtHumanPlayer1Name.Size = new System.Drawing.Size(352, 33);
-            this.txtHumanPlayer1Name.TabIndex = 2;
-            // 
-            // txtHumanPlayer2Name
-            // 
-            this.txtHumanPlayer2Name.Location = new System.Drawing.Point(151, 305);
-            this.txtHumanPlayer2Name.Name = "txtHumanPlayer2Name";
-            this.txtHumanPlayer2Name.Size = new System.Drawing.Size(352, 33);
-            this.txtHumanPlayer2Name.TabIndex = 10;
-            // 
-            // lblName2
-            // 
-            this.lblName2.AutoSize = true;
-            this.lblName2.Location = new System.Drawing.Point(12, 305);
-            this.lblName2.Name = "lblName2";
-            this.lblName2.Size = new System.Drawing.Size(138, 25);
-            this.lblName2.TabIndex = 9;
-            this.lblName2.Text = "Player 2 Name:";
-            // 
-            // btnChoosePhoto2
-            // 
-            this.btnChoosePhoto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChoosePhoto2.Location = new System.Drawing.Point(380, 442);
-            this.btnChoosePhoto2.Name = "btnChoosePhoto2";
-            this.btnChoosePhoto2.Size = new System.Drawing.Size(123, 40);
-            this.btnChoosePhoto2.TabIndex = 12;
-            this.btnChoosePhoto2.Text = "Choose Photo";
-            this.btnChoosePhoto2.UseVisualStyleBackColor = true;
-            this.btnChoosePhoto2.Click += new System.EventHandler(this.btnChoosePhoto2_Click);
+            this.pictureboxBotPhoto1.Location = new System.Drawing.Point(417, 61);
+            this.pictureboxBotPhoto1.Name = "pictureboxBotPhoto1";
+            this.pictureboxBotPhoto1.Size = new System.Drawing.Size(86, 90);
+            this.pictureboxBotPhoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureboxBotPhoto1.TabIndex = 5;
+            this.pictureboxBotPhoto1.TabStop = false;
             // 
             // tabControl1
             // 
@@ -406,6 +406,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormConfigure";
             this.Text = "Configure";
@@ -418,8 +419,8 @@
             this.tabPageAI.PerformLayout();
             this.tabPageHumanPlayer1.ResumeLayout(false);
             this.tabPageHumanPlayer1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureboxBotPhoto1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxBotPhoto2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxBotPhoto1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
